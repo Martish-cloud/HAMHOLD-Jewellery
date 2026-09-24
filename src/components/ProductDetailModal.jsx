@@ -72,6 +72,12 @@ export default function ProductDetailModal() {
               <img
                 src={gallery[activeImageIdx]?.src || selectedProduct.primaryImage}
                 alt={selectedProduct.name}
+                decoding="async"
+                onError={(e) => {
+                  if (e.currentTarget.src !== selectedProduct.primaryImage) {
+                    e.currentTarget.src = selectedProduct.primaryImage;
+                  }
+                }}
                 className={`w-full h-full object-contain filter drop-shadow-[0_15px_30px_rgba(0,0,0,0.85)] transition-transform duration-500 ${
                   isZoomed ? 'scale-150' : 'scale-100 hover:scale-105'
                 }`}

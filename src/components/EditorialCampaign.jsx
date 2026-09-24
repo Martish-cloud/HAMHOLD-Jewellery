@@ -1,5 +1,5 @@
 import React from 'react';
-import { ArrowRight } from 'lucide-react';
+import { ArrowRight, Sparkles } from 'lucide-react';
 import { useShop } from '../context/ShopContext';
 
 export default function EditorialCampaign() {
@@ -7,22 +7,28 @@ export default function EditorialCampaign() {
 
   return (
     <section className="relative py-28 md:py-40 bg-obsidian overflow-hidden border-t border-champagne/15">
-      {/* Background Cinematic Atmosphere */}
+      {/* Background Cinematic Atmosphere featuring HAMHOLD Brand Ambassador */}
       <div className="absolute inset-0 z-0">
-        <img
-          src="https://images.unsplash.com/photo-1515562141207-7a88fb7ce338?auto=format&fit=crop&w=2000&q=85"
-          alt="HAMHOLD Campaign Editorial"
-          className="w-full h-full object-cover object-center filter brightness-[0.28] contrast-125 scale-105"
-        />
-        <div className="absolute inset-0 bg-gradient-to-r from-obsidian via-obsidian/80 to-transparent" />
+        <picture>
+          <source media="(max-width: 768px)" srcSet="/images/brand/ambassador/ambassador-hero-mobile.webp" />
+          <img
+            src="/images/brand/ambassador/ambassador-hero.webp"
+            alt="HAMHOLD Brand Ambassador"
+            className="w-full h-full object-cover object-[center_28%] filter brightness-[0.42] contrast-115 scale-105"
+            loading="lazy"
+            decoding="async"
+          />
+        </picture>
+        <div className="absolute inset-0 bg-gradient-to-r from-obsidian via-obsidian/85 to-transparent" />
         <div className="absolute inset-0 bg-gradient-to-t from-obsidian via-transparent to-obsidian" />
       </div>
 
       <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="max-w-2xl">
-          <span className="text-[10px] md:text-xs uppercase tracking-[0.3em] text-champagne font-medium block mb-4">
-            Campaign Édition 2026
-          </span>
+          <div className="inline-flex items-center gap-2 text-[10px] md:text-xs uppercase tracking-[0.3em] text-champagne font-medium mb-4">
+            <Sparkles className="w-3.5 h-3.5" />
+            <span>Campaign Édition 2026</span>
+          </div>
           <h2 className="font-serif-luxury text-4xl sm:text-6xl md:text-7xl text-ivory tracking-[0.03em] font-normal leading-[1.08] mb-6">
             THE ART OF <br />
             <span className="italic font-light text-gold-gradient">BECOMING.</span>

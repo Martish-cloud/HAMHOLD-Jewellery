@@ -67,9 +67,15 @@ export default function ProductCard({ product, priority = false }) {
 
         {/* Primary Isolated Jewellery (Transparent Background) */}
         <img
-          src={product.primaryImage}
+          src={product.thumbImage || product.primaryImage}
           alt={product.name}
           loading={priority ? 'eager' : 'lazy'}
+          decoding="async"
+          onError={(e) => {
+            if (product.fallbackImage && e.currentTarget.src !== product.fallbackImage) {
+              e.currentTarget.src = product.fallbackImage;
+            }
+          }}
           className="product-card-image relative z-[1] w-full h-full object-contain filter drop-shadow-[0_12px_24px_rgba(0,0,0,0.65)]"
         />
 

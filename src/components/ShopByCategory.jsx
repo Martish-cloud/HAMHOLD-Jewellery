@@ -51,6 +51,7 @@ export default function ShopByCategory() {
                   src={cat.image}
                   alt={cat.name}
                   loading="lazy"
+                  decoding="async"
                   className="w-full h-full object-contain filter drop-shadow-[0_8px_16px_rgba(0,0,0,0.6)] transform group-hover:scale-110 group-hover:-translate-y-1 transition-all duration-500"
                 />
               </div>

@@ -85,10 +85,15 @@ export default function Hero() {
             {/* Glowing Backdrop behind jewellery */}
             <div className="absolute w-48 h-48 rounded-full bg-champagne/15 blur-2xl pointer-events-none" />
 
-            {/* Hero Floating Solitaire Diamond Ring (100% Transparent SVG) */}
+            {/* Hero Floating Solitaire Diamond Ring */}
             <img
-              src="/images/products/aurelia-solitaire-ring.svg"
+              src="/images/jewellery/women/aurelia-solitaire-ring.webp"
+              onError={(e) => {
+                e.currentTarget.src = "/images/products/aurelia-solitaire-ring.svg";
+              }}
               alt="HAMHOLD Aurelia Solitaire Diamond Ring"
+              fetchpriority="high"
+              decoding="async"
               className="relative z-10 w-full h-full object-contain filter drop-shadow-[0_25px_35px_rgba(0,0,0,0.85)] hover:scale-105 transition-transform duration-700 cursor-pointer"
               onClick={() => navigateToCatalogue()}
               data-cursor="view"

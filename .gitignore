@@ -28,3 +28,8 @@ dist-ssr
 *.njsproj
 *.sln
 *.sw?
+
+# Raw unoptimized source assets
+src/HamHold/
+scripts/__pycache__/
+*.pyc

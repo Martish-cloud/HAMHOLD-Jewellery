@@ -30,13 +30,34 @@ export default function AboutModal() {
             </p>
           </div>
 
-          <div className="space-y-4 text-xs sm:text-sm text-ivory-soft/90 font-light leading-relaxed font-sans">
-            <p>
-              HAMHOLD is an independent luxury fine jewellery atelier dedicated to contemporary elegance, architectural discipline, and enduring emotional significance. Our aesthetic direction — the <em>Midnight Atelier</em> — moves away from generic luxury palettes, embracing the cinematic contrast of obsidian, warm ivory, and deep champagne tones.
-            </p>
-            <p>
-              Every ring, necklace, cuff, and kada in our 37-piece demo catalogue is conceived not as transient adornment, but as an heirloom engineered structurally to last generations. We work exclusively with certified 18K solid gold, 950 platinum, and naturally graded gemstones.
-            </p>
+          <div className="grid grid-cols-1 md:grid-cols-12 gap-6 items-center">
+            <div className="md:col-span-5 relative rounded-xl overflow-hidden border border-champagne/30 shadow-luxury bg-obsidian-card">
+              <img
+                src="/images/brand/ambassador/ambassador-portrait.webp"
+                alt="HAMHOLD Brand Ambassador"
+                className="w-full h-64 sm:h-72 md:h-80 object-cover object-top"
+                loading="lazy"
+                decoding="async"
+              />
+              <div className="absolute inset-0 bg-gradient-to-t from-obsidian via-transparent to-transparent" />
+              <div className="absolute bottom-3 left-3 right-3 text-center">
+                <span className="text-[10px] uppercase tracking-[0.25em] text-champagne font-semibold block">
+                  Campaign Édition 2026
+                </span>
+                <span className="text-[9px] text-ivory-muted tracking-wider">
+                  The HAMHOLD Ambassador
+                </span>
+              </div>
+            </div>
+
+            <div className="md:col-span-7 space-y-4 text-xs sm:text-sm text-ivory-soft/90 font-light leading-relaxed font-sans">
+              <p>
+                HAMHOLD is an independent luxury fine jewellery atelier dedicated to contemporary elegance, architectural discipline, and enduring emotional significance. Our aesthetic direction — the <em>Midnight Atelier</em> — moves away from generic luxury palettes, embracing the cinematic contrast of obsidian, warm ivory, and deep champagne tones.
+              </p>
+              <p>
+                Every ring, necklace, cuff, and kada in our 37-piece demo catalogue is conceived not as transient adornment, but as an heirloom engineered structurally to last generations. We work exclusively with certified 18K solid gold, 950 platinum, and naturally graded gemstones.
+              </p>
+            </div>
           </div>
 
           <div className="grid grid-cols-1 sm:grid-cols-3 gap-4 pt-4 border-t border-champagne/15">
