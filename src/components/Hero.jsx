@@ -74,45 +74,34 @@ export default function Hero() {
           </div>
         </div>
 
-        {/* Right Column: Hero Floating Jewellery Masterpiece (Transparent Background) */}
-        <div className="lg:col-span-5 relative flex items-center justify-center">
-          {/* Circular Architectural Halo */}
-          <div className="relative w-[320px] sm:w-[420px] lg:w-[460px] aspect-square rounded-full border border-champagne/20 flex items-center justify-center p-8 bg-gradient-radial from-espresso/40 via-obsidian-card/60 to-transparent">
-            {/* Concentric subtle rings */}
-            <div className="absolute inset-4 rounded-full border border-champagne/10 border-dashed animate-[spin_60s_linear_infinite]" />
-            <div className="absolute inset-14 rounded-full border border-champagne/15" />
+        {/* Right Column: HAMHOLD Brand Ambassador Editorial Campaign Visual */}
+        <div className="lg:col-span-5 relative flex items-center justify-center lg:justify-end w-full">
+          {/* Ambient Warm Atmosphere & Backlight behind the subject */}
+          <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[300px] sm:w-[380px] lg:w-[440px] h-[360px] sm:h-[460px] lg:h-[540px] bg-champagne/12 rounded-full blur-[110px] pointer-events-none" />
+          <div className="absolute -bottom-6 right-1/4 w-[240px] h-[240px] bg-bronze/15 rounded-full blur-[90px] pointer-events-none" />
 
-            {/* Glowing Backdrop behind jewellery */}
-            <div className="absolute w-48 h-48 rounded-full bg-champagne/15 blur-2xl pointer-events-none" />
-
-            {/* Hero Floating Solitaire Diamond Ring */}
-            <img
-              src="/images/jewellery/women/aurelia-solitaire-ring.webp"
-              onError={(e) => {
-                e.currentTarget.src = "/images/products/aurelia-solitaire-ring.svg";
+          {/* Seamless Editorial Ambassador Frame without hard border or card */}
+          <div className="relative w-full max-w-[340px] sm:max-w-[420px] lg:max-w-[460px] xl:max-w-[500px] flex items-center justify-center">
+            {/* Visual Container with gentle radial edge fade - 100% natural, seamless blend into dark background */}
+            <div
+              className="relative w-full overflow-hidden"
+              style={{
+                WebkitMaskImage: 'radial-gradient(ellipse at center, rgba(0,0,0,1) 58%, rgba(0,0,0,0.85) 75%, rgba(0,0,0,0) 100%)',
+                maskImage: 'radial-gradient(ellipse at center, rgba(0,0,0,1) 58%, rgba(0,0,0,0.85) 75%, rgba(0,0,0,0) 100%)'
               }}
-              alt="HAMHOLD Aurelia Solitaire Diamond Ring"
-              fetchpriority="high"
-              decoding="async"
-              className="relative z-10 w-full h-full object-contain filter drop-shadow-[0_25px_35px_rgba(0,0,0,0.85)] hover:scale-105 transition-transform duration-700 cursor-pointer"
-              onClick={() => navigateToCatalogue()}
-              data-cursor="view"
-            />
+            >
+              <img
+                src="/images/brand/ambassador/ambassador-portrait.webp"
+                alt="HAMHOLD Brand Ambassador"
+                fetchpriority="high"
+                decoding="async"
+                className="w-full h-auto max-h-[460px] sm:max-h-[540px] lg:max-h-[620px] object-cover object-top select-none pointer-events-none transition-transform duration-1000 ease-out hover:scale-[1.02]"
+              />
 
-            {/* Floating Editorial Badge (Bottom right) */}
-            <div className="absolute -bottom-4 right-0 sm:right-6 z-20 px-4 py-3 rounded-xl bg-obsidian-surface/95 border border-champagne/30 backdrop-blur-xl shadow-2xl max-w-[210px] text-left">
-              <span className="text-[9px] uppercase tracking-widest text-champagne font-semibold block mb-0.5">
-                Signature Piece
-              </span>
-              <h4 className="font-serif-luxury text-sm text-ivory font-medium line-clamp-1">
-                Aurelia Solitaire Ring
-              </h4>
-              <p className="text-[10px] text-ivory-muted/70 font-sans mt-0.5">
-                18K Gold • 0.75ct VVS1
-              </p>
-              <div className="text-xs font-semibold text-champagne mt-1">
-                ₹68,500
-              </div>
+              {/* Edge Gradient Fades: seamlessly dissolve edges into the midnight atelier canvas */}
+              <div className="absolute inset-0 bg-gradient-to-t from-obsidian via-obsidian/30 to-transparent opacity-90 pointer-events-none" />
+              <div className="absolute inset-0 bg-gradient-to-r from-obsidian/60 via-transparent to-transparent opacity-80 pointer-events-none hidden lg:block" />
+              <div className="absolute inset-0 bg-gradient-to-b from-obsidian/40 via-transparent to-transparent opacity-50 pointer-events-none" />
             </div>
           </div>
         </div>

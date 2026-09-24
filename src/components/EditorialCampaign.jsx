@@ -14,17 +14,19 @@ export default function EditorialCampaign() {
           <img
             src="/images/brand/ambassador/ambassador-hero.webp"
             alt="HAMHOLD Brand Ambassador"
-            className="w-full h-full object-cover object-[center_28%] filter brightness-[0.42] contrast-115 scale-105"
+            className="w-full h-full object-cover object-[center_25%] md:object-[68%_25%] filter brightness-90 contrast-105 scale-105"
             loading="lazy"
             decoding="async"
           />
         </picture>
-        <div className="absolute inset-0 bg-gradient-to-r from-obsidian via-obsidian/85 to-transparent" />
-        <div className="absolute inset-0 bg-gradient-to-t from-obsidian via-transparent to-obsidian" />
+        {/* Directional Gradient: Darker on the left for text readability, clear & transparent on center-right to showcase the ambassador */}
+        <div className="absolute inset-0 bg-[linear-gradient(to_bottom,rgba(11,11,12,0.92)_0%,rgba(11,11,12,0.72)_45%,rgba(11,11,12,0.2)_100%)] md:bg-[linear-gradient(to_right,rgba(11,11,12,0.96)_0%,rgba(11,11,12,0.85)_32%,rgba(11,11,12,0.38)_58%,rgba(11,11,12,0.05)_78%,transparent_100%)] pointer-events-none" />
+        {/* Subtle top & bottom edge transition */}
+        <div className="absolute inset-0 bg-[linear-gradient(to_bottom,rgba(11,11,12,0.65)_0%,transparent_18%,transparent_82%,rgba(11,11,12,0.75)_100%)] pointer-events-none" />
       </div>
 
       <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="max-w-2xl">
+        <div className="max-w-2xl drop-shadow-[0_2px_12px_rgba(0,0,0,0.7)]">
           <div className="inline-flex items-center gap-2 text-[10px] md:text-xs uppercase tracking-[0.3em] text-champagne font-medium mb-4">
             <Sparkles className="w-3.5 h-3.5" />
             <span>Campaign Édition 2026</span>

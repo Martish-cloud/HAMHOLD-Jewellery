@@ -21,7 +21,7 @@ export default function BrandStory() {
     {
       icon: Heart,
       title: 'Milestones & Memories',
-      desc: 'Whether marking a personal victory, an anniversary, or a quiet everyday celebration, HAMHOLD jewellery acts as an enduring anchor for what matters.'
+      desc: 'Whether marking a personal victory, an anniversary, or a quiet everyday celebration, HAMHOLD creations act as an enduring anchor for what matters.'
     }
   ];
 
