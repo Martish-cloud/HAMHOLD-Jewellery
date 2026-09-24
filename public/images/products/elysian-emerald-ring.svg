@@ -1,0 +1,90 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 500 500" width="100%" height="100%">
+  <defs>
+    
+      <linearGradient id="metalGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+        <stop offset="0%" stop-color="#FFF5D6" />
+        <stop offset="25%" stop-color="#E5C77A" />
+        <stop offset="50%" stop-color="#C59B3F" />
+        <stop offset="75%" stop-color="#F2DE9C" />
+        <stop offset="100%" stop-color="#936D21" />
+      </linearGradient>
+      <linearGradient id="metalHighlight" x1="0%" y1="0%" x2="0%" y2="100%">
+        <stop offset="0%" stop-color="#FFFFFF" stop-opacity="0.9" />
+        <stop offset="50%" stop-color="#FFF0BE" stop-opacity="0.2" />
+        <stop offset="100%" stop-color="#6F5015" stop-opacity="0.8" />
+      </linearGradient>
+    
+    
+    <radialGradient id="diamondShine" cx="35%" cy="30%" r="65%">
+      <stop offset="0%" stop-color="#FFFFFF" />
+      <stop offset="30%" stop-color="#EBF5FB" />
+      <stop offset="60%" stop-color="#D4E6F1" />
+      <stop offset="85%" stop-color="#A9CCE3" />
+      <stop offset="100%" stop-color="#5DADE2" />
+    </radialGradient>
+    <radialGradient id="emeraldShine" cx="35%" cy="30%" r="65%">
+      <stop offset="0%" stop-color="#A3E4D7" />
+      <stop offset="35%" stop-color="#1ABC9C" />
+      <stop offset="70%" stop-color="#0E6251" />
+      <stop offset="100%" stop-color="#073B30" />
+    </radialGradient>
+    <radialGradient id="sapphireShine" cx="35%" cy="30%" r="65%">
+      <stop offset="0%" stop-color="#A9CCE3" />
+      <stop offset="35%" stop-color="#2471A3" />
+      <stop offset="70%" stop-color="#154360" />
+      <stop offset="100%" stop-color="#0A2233" />
+    </radialGradient>
+    <radialGradient id="pearlShine" cx="35%" cy="30%" r="60%">
+      <stop offset="0%" stop-color="#FFFFFF" />
+      <stop offset="40%" stop-color="#F7F5F0" />
+      <stop offset="75%" stop-color="#E4DDD3" />
+      <stop offset="90%" stop-color="#C2B7A7" />
+      <stop offset="100%" stop-color="#8E8271" />
+    </radialGradient>
+    <radialGradient id="tahitianPearl" cx="35%" cy="30%" r="60%">
+      <stop offset="0%" stop-color="#C7CCD1" />
+      <stop offset="35%" stop-color="#4A525A" />
+      <stop offset="70%" stop-color="#202428" />
+      <stop offset="100%" stop-color="#0F1113" />
+    </radialGradient>
+    <radialGradient id="onyxShine" cx="35%" cy="30%" r="65%">
+      <stop offset="0%" stop-color="#4B4E53" />
+      <stop offset="45%" stop-color="#1C1D1F" />
+      <stop offset="100%" stop-color="#080809" />
+    </radialGradient>
+    <filter id="softGlow" x="-20%" y="-20%" width="140%" height="140%">
+      <feGaussianBlur stdDeviation="6" result="blur" />
+      <feComposite in="SourceGraphic" in2="blur" operator="over" />
+    </filter>
+    <filter id="subtleContactShadow" x="-30%" y="-30%" width="160%" height="160%">
+      <feGaussianBlur stdDeviation="8" result="blur" />
+      <feColorMatrix type="matrix" values="0 0 0 0 0   0 0 0 0 0   0 0 0 0 0  0 0 0 0.5 0"/>
+    </filter>
+  
+  </defs>
+  <!-- 100% Transparent Background - Floating Fine Jewellery -->
+  
+        <ellipse cx="250" cy="420" rx="140" ry="18" fill="#000000" opacity="0.45" filter="url(#subtleContactShadow)"/>
+        <g transform="translate(0, 20)">
+          <!-- Gold Band -->
+          <ellipse cx="250" cy="270" rx="130" ry="110" fill="none" stroke="url(#metalGrad)" stroke-width="28"/>
+          <ellipse cx="250" cy="270" rx="130" ry="110" fill="none" stroke="url(#metalHighlight)" stroke-width="6"/>
+          <!-- Pavé Shoulder Diamonds -->
+          <circle cx="200" cy="175" r="4.5" fill="url(#diamondShine)" stroke="#FFF" stroke-width="0.5"/><circle cx="215" cy="175" r="4.5" fill="url(#diamondShine)" stroke="#FFF" stroke-width="0.5"/><circle cx="285" cy="175" r="4.5" fill="url(#diamondShine)" stroke="#FFF" stroke-width="0.5"/><circle cx="300" cy="175" r="4.5" fill="url(#diamondShine)" stroke="#FFF" stroke-width="0.5"/>
+          <!-- Collet Bezel Setting -->
+          <rect x="205" y="70" width="90" height="110" rx="8" fill="url(#metalGrad)"/>
+          <rect x="210" y="75" width="80" height="100" rx="6" fill="#05261F"/>
+          <!-- Emerald Cut Gemstone -->
+          <polygon points="215,80 285,80 280,165 220,165" fill="url(#emeraldShine)"/>
+          <polygon points="225,92 275,92 270,153 230,153" fill="#1ABC9C" opacity="0.85"/>
+          <polygon points="232,100 268,100 265,145 235,145" fill="#A3E4D7" opacity="0.6"/>
+          <!-- Table reflection facet -->
+          <polygon points="230,95 245,95 240,150 227,150" fill="#FFFFFF" opacity="0.4"/>
+          <!-- Prongs on 4 corners -->
+          <circle cx="212" cy="77" r="5" fill="url(#metalGrad)"/>
+          <circle cx="288" cy="77" r="5" fill="url(#metalGrad)"/>
+          <circle cx="212" cy="173" r="5" fill="url(#metalGrad)"/>
+          <circle cx="288" cy="173" r="5" fill="url(#metalGrad)"/>
+        </g>
+      
+</svg>

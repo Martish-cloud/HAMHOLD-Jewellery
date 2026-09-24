@@ -1,0 +1,75 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 500 500" width="100%" height="100%">
+  <defs>
+    
+      <linearGradient id="metalGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+        <stop offset="0%" stop-color="#FFF5D6" />
+        <stop offset="25%" stop-color="#E5C77A" />
+        <stop offset="50%" stop-color="#C59B3F" />
+        <stop offset="75%" stop-color="#F2DE9C" />
+        <stop offset="100%" stop-color="#936D21" />
+      </linearGradient>
+      <linearGradient id="metalHighlight" x1="0%" y1="0%" x2="0%" y2="100%">
+        <stop offset="0%" stop-color="#FFFFFF" stop-opacity="0.9" />
+        <stop offset="50%" stop-color="#FFF0BE" stop-opacity="0.2" />
+        <stop offset="100%" stop-color="#6F5015" stop-opacity="0.8" />
+      </linearGradient>
+    
+    
+    <radialGradient id="diamondShine" cx="35%" cy="30%" r="65%">
+      <stop offset="0%" stop-color="#FFFFFF" />
+      <stop offset="30%" stop-color="#EBF5FB" />
+      <stop offset="60%" stop-color="#D4E6F1" />
+      <stop offset="85%" stop-color="#A9CCE3" />
+      <stop offset="100%" stop-color="#5DADE2" />
+    </radialGradient>
+    <radialGradient id="emeraldShine" cx="35%" cy="30%" r="65%">
+      <stop offset="0%" stop-color="#A3E4D7" />
+      <stop offset="35%" stop-color="#1ABC9C" />
+      <stop offset="70%" stop-color="#0E6251" />
+      <stop offset="100%" stop-color="#073B30" />
+    </radialGradient>
+    <radialGradient id="sapphireShine" cx="35%" cy="30%" r="65%">
+      <stop offset="0%" stop-color="#A9CCE3" />
+      <stop offset="35%" stop-color="#2471A3" />
+      <stop offset="70%" stop-color="#154360" />
+      <stop offset="100%" stop-color="#0A2233" />
+    </radialGradient>
+    <radialGradient id="pearlShine" cx="35%" cy="30%" r="60%">
+      <stop offset="0%" stop-color="#FFFFFF" />
+      <stop offset="40%" stop-color="#F7F5F0" />
+      <stop offset="75%" stop-color="#E4DDD3" />
+      <stop offset="90%" stop-color="#C2B7A7" />
+      <stop offset="100%" stop-color="#8E8271" />
+    </radialGradient>
+    <radialGradient id="tahitianPearl" cx="35%" cy="30%" r="60%">
+      <stop offset="0%" stop-color="#C7CCD1" />
+      <stop offset="35%" stop-color="#4A525A" />
+      <stop offset="70%" stop-color="#202428" />
+      <stop offset="100%" stop-color="#0F1113" />
+    </radialGradient>
+    <radialGradient id="onyxShine" cx="35%" cy="30%" r="65%">
+      <stop offset="0%" stop-color="#4B4E53" />
+      <stop offset="45%" stop-color="#1C1D1F" />
+      <stop offset="100%" stop-color="#080809" />
+    </radialGradient>
+    <filter id="softGlow" x="-20%" y="-20%" width="140%" height="140%">
+      <feGaussianBlur stdDeviation="6" result="blur" />
+      <feComposite in="SourceGraphic" in2="blur" operator="over" />
+    </filter>
+    <filter id="subtleContactShadow" x="-30%" y="-30%" width="160%" height="160%">
+      <feGaussianBlur stdDeviation="8" result="blur" />
+      <feColorMatrix type="matrix" values="0 0 0 0 0   0 0 0 0 0   0 0 0 0 0  0 0 0 0.5 0"/>
+    </filter>
+  
+  </defs>
+  <!-- 100% Transparent Background - Floating Fine Jewellery -->
+  
+        <ellipse cx="250" cy="430" rx="170" ry="20" fill="#000000" opacity="0.4" filter="url(#subtleContactShadow)"/>
+        <g transform="translate(0, 10)">
+          <path d="M 90 140 C 90 350 410 350 410 140" fill="none" stroke="url(#metalGrad)" stroke-width="24"/>
+          <path d="M 90 140 C 90 350 410 350 410 140" fill="none" stroke="url(#metalHighlight)" stroke-width="6"/>
+          <!-- Chevron Herringbone weave segments -->
+          <line x1="84.0" y1="132.0" x2="96.0" y2="148.0" stroke="#6F5015" stroke-width="2" opacity="0.6"/><line x1="94.3" y1="145.1" x2="106.3" y2="161.1" stroke="#6F5015" stroke-width="2" opacity="0.6"/><line x1="104.6" y1="157.3" x2="116.6" y2="173.3" stroke="#6F5015" stroke-width="2" opacity="0.6"/><line x1="115.0" y1="168.7" x2="127.0" y2="184.7" stroke="#6F5015" stroke-width="2" opacity="0.6"/><line x1="125.3" y1="179.2" x2="137.3" y2="195.2" stroke="#6F5015" stroke-width="2" opacity="0.6"/><line x1="135.6" y1="188.8" x2="147.6" y2="204.8" stroke="#6F5015" stroke-width="2" opacity="0.6"/><line x1="145.9" y1="197.6" x2="157.9" y2="213.6" stroke="#6F5015" stroke-width="2" opacity="0.6"/><line x1="156.3" y1="205.4" x2="168.3" y2="221.4" stroke="#6F5015" stroke-width="2" opacity="0.6"/><line x1="166.6" y1="212.4" x2="178.6" y2="228.4" stroke="#6F5015" stroke-width="2" opacity="0.6"/><line x1="176.9" y1="218.5" x2="188.9" y2="234.5" stroke="#6F5015" stroke-width="2" opacity="0.6"/><line x1="187.2" y1="223.8" x2="199.2" y2="239.8" stroke="#6F5015" stroke-width="2" opacity="0.6"/><line x1="197.5" y1="228.1" x2="209.5" y2="244.1" stroke="#6F5015" stroke-width="2" opacity="0.6"/><line x1="207.9" y1="231.6" x2="219.9" y2="247.6" stroke="#6F5015" stroke-width="2" opacity="0.6"/><line x1="218.2" y1="234.3" x2="230.2" y2="250.3" stroke="#6F5015" stroke-width="2" opacity="0.6"/><line x1="228.5" y1="236.0" x2="240.5" y2="252.0" stroke="#6F5015" stroke-width="2" opacity="0.6"/><line x1="238.8" y1="236.9" x2="250.8" y2="252.9" stroke="#6F5015" stroke-width="2" opacity="0.6"/><line x1="249.2" y1="236.9" x2="261.2" y2="252.9" stroke="#6F5015" stroke-width="2" opacity="0.6"/><line x1="259.5" y1="236.0" x2="271.5" y2="252.0" stroke="#6F5015" stroke-width="2" opacity="0.6"/><line x1="269.8" y1="234.3" x2="281.8" y2="250.3" stroke="#6F5015" stroke-width="2" opacity="0.6"/><line x1="280.1" y1="231.6" x2="292.1" y2="247.6" stroke="#6F5015" stroke-width="2" opacity="0.6"/><line x1="290.5" y1="228.1" x2="302.5" y2="244.1" stroke="#6F5015" stroke-width="2" opacity="0.6"/><line x1="300.8" y1="223.8" x2="312.8" y2="239.8" stroke="#6F5015" stroke-width="2" opacity="0.6"/><line x1="311.1" y1="218.5" x2="323.1" y2="234.5" stroke="#6F5015" stroke-width="2" opacity="0.6"/><line x1="321.4" y1="212.4" x2="333.4" y2="228.4" stroke="#6F5015" stroke-width="2" opacity="0.6"/><line x1="331.7" y1="205.4" x2="343.7" y2="221.4" stroke="#6F5015" stroke-width="2" opacity="0.6"/><line x1="342.1" y1="197.6" x2="354.1" y2="213.6" stroke="#6F5015" stroke-width="2" opacity="0.6"/><line x1="352.4" y1="188.8" x2="364.4" y2="204.8" stroke="#6F5015" stroke-width="2" opacity="0.6"/><line x1="362.7" y1="179.2" x2="374.7" y2="195.2" stroke="#6F5015" stroke-width="2" opacity="0.6"/><line x1="373.0" y1="168.7" x2="385.0" y2="184.7" stroke="#6F5015" stroke-width="2" opacity="0.6"/><line x1="383.4" y1="157.3" x2="395.4" y2="173.3" stroke="#6F5015" stroke-width="2" opacity="0.6"/><line x1="393.7" y1="145.1" x2="405.7" y2="161.1" stroke="#6F5015" stroke-width="2" opacity="0.6"/><line x1="404.0" y1="132.0" x2="416.0" y2="148.0" stroke="#6F5015" stroke-width="2" opacity="0.6"/>
+        </g>
+      
+</svg>

@@ -1,0 +1,127 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 500 500" width="100%" height="100%">
+  <defs>
+    
+      <linearGradient id="metalGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+        <stop offset="0%" stop-color="#FFF5D6" />
+        <stop offset="25%" stop-color="#E5C77A" />
+        <stop offset="50%" stop-color="#C59B3F" />
+        <stop offset="75%" stop-color="#F2DE9C" />
+        <stop offset="100%" stop-color="#936D21" />
+      </linearGradient>
+      <linearGradient id="metalHighlight" x1="0%" y1="0%" x2="0%" y2="100%">
+        <stop offset="0%" stop-color="#FFFFFF" stop-opacity="0.9" />
+        <stop offset="50%" stop-color="#FFF0BE" stop-opacity="0.2" />
+        <stop offset="100%" stop-color="#6F5015" stop-opacity="0.8" />
+      </linearGradient>
+    
+    
+    <radialGradient id="diamondShine" cx="35%" cy="30%" r="65%">
+      <stop offset="0%" stop-color="#FFFFFF" />
+      <stop offset="30%" stop-color="#EBF5FB" />
+      <stop offset="60%" stop-color="#D4E6F1" />
+      <stop offset="85%" stop-color="#A9CCE3" />
+      <stop offset="100%" stop-color="#5DADE2" />
+    </radialGradient>
+    <radialGradient id="emeraldShine" cx="35%" cy="30%" r="65%">
+      <stop offset="0%" stop-color="#A3E4D7" />
+      <stop offset="35%" stop-color="#1ABC9C" />
+      <stop offset="70%" stop-color="#0E6251" />
+      <stop offset="100%" stop-color="#073B30" />
+    </radialGradient>
+    <radialGradient id="sapphireShine" cx="35%" cy="30%" r="65%">
+      <stop offset="0%" stop-color="#A9CCE3" />
+      <stop offset="35%" stop-color="#2471A3" />
+      <stop offset="70%" stop-color="#154360" />
+      <stop offset="100%" stop-color="#0A2233" />
+    </radialGradient>
+    <radialGradient id="pearlShine" cx="35%" cy="30%" r="60%">
+      <stop offset="0%" stop-color="#FFFFFF" />
+      <stop offset="40%" stop-color="#F7F5F0" />
+      <stop offset="75%" stop-color="#E4DDD3" />
+      <stop offset="90%" stop-color="#C2B7A7" />
+      <stop offset="100%" stop-color="#8E8271" />
+    </radialGradient>
+    <radialGradient id="tahitianPearl" cx="35%" cy="30%" r="60%">
+      <stop offset="0%" stop-color="#C7CCD1" />
+      <stop offset="35%" stop-color="#4A525A" />
+      <stop offset="70%" stop-color="#202428" />
+      <stop offset="100%" stop-color="#0F1113" />
+    </radialGradient>
+    <radialGradient id="onyxShine" cx="35%" cy="30%" r="65%">
+      <stop offset="0%" stop-color="#4B4E53" />
+      <stop offset="45%" stop-color="#1C1D1F" />
+      <stop offset="100%" stop-color="#080809" />
+    </radialGradient>
+    <filter id="softGlow" x="-20%" y="-20%" width="140%" height="140%">
+      <feGaussianBlur stdDeviation="6" result="blur" />
+      <feComposite in="SourceGraphic" in2="blur" operator="over" />
+    </filter>
+    <filter id="subtleContactShadow" x="-30%" y="-30%" width="160%" height="160%">
+      <feGaussianBlur stdDeviation="8" result="blur" />
+      <feColorMatrix type="matrix" values="0 0 0 0 0   0 0 0 0 0   0 0 0 0 0  0 0 0 0.5 0"/>
+    </filter>
+  
+  </defs>
+  <!-- 100% Transparent Background - Floating Fine Jewellery -->
+  
+        <ellipse cx="250" cy="430" rx="160" ry="20" fill="#000000" opacity="0.45" filter="url(#subtleContactShadow)"/>
+        <g transform="translate(0, 10)">
+          <!-- Heavy Interlocking Cuban Links -->
+          
+              <ellipse cx="90.0" cy="140.0" rx="18" ry="14" fill="none" stroke="url(#metalGrad)" stroke-width="12" transform="rotate(-30.0, 90.0, 140.0)"/>
+              <ellipse cx="90.0" cy="140.0" rx="18" ry="14" fill="none" stroke="url(#metalHighlight)" stroke-width="3" transform="rotate(-30.0, 90.0, 140.0)"/>
+            
+              <ellipse cx="108.8" cy="164.4" rx="18" ry="14" fill="none" stroke="url(#metalGrad)" stroke-width="12" transform="rotate(-26.5, 108.8, 164.4)"/>
+              <ellipse cx="108.8" cy="164.4" rx="18" ry="14" fill="none" stroke="url(#metalHighlight)" stroke-width="3" transform="rotate(-26.5, 108.8, 164.4)"/>
+            
+              <ellipse cx="127.6" cy="185.7" rx="18" ry="14" fill="none" stroke="url(#metalGrad)" stroke-width="12" transform="rotate(-22.9, 127.6, 185.7)"/>
+              <ellipse cx="127.6" cy="185.7" rx="18" ry="14" fill="none" stroke="url(#metalHighlight)" stroke-width="3" transform="rotate(-22.9, 127.6, 185.7)"/>
+            
+              <ellipse cx="146.5" cy="203.9" rx="18" ry="14" fill="none" stroke="url(#metalGrad)" stroke-width="12" transform="rotate(-19.4, 146.5, 203.9)"/>
+              <ellipse cx="146.5" cy="203.9" rx="18" ry="14" fill="none" stroke="url(#metalHighlight)" stroke-width="3" transform="rotate(-19.4, 146.5, 203.9)"/>
+            
+              <ellipse cx="165.3" cy="219.2" rx="18" ry="14" fill="none" stroke="url(#metalGrad)" stroke-width="12" transform="rotate(-15.9, 165.3, 219.2)"/>
+              <ellipse cx="165.3" cy="219.2" rx="18" ry="14" fill="none" stroke="url(#metalHighlight)" stroke-width="3" transform="rotate(-15.9, 165.3, 219.2)"/>
+            
+              <ellipse cx="184.1" cy="231.3" rx="18" ry="14" fill="none" stroke="url(#metalGrad)" stroke-width="12" transform="rotate(-12.4, 184.1, 231.3)"/>
+              <ellipse cx="184.1" cy="231.3" rx="18" ry="14" fill="none" stroke="url(#metalHighlight)" stroke-width="3" transform="rotate(-12.4, 184.1, 231.3)"/>
+            
+              <ellipse cx="202.9" cy="240.5" rx="18" ry="14" fill="none" stroke="url(#metalGrad)" stroke-width="12" transform="rotate(-8.8, 202.9, 240.5)"/>
+              <ellipse cx="202.9" cy="240.5" rx="18" ry="14" fill="none" stroke="url(#metalHighlight)" stroke-width="3" transform="rotate(-8.8, 202.9, 240.5)"/>
+            
+              <ellipse cx="221.8" cy="246.6" rx="18" ry="14" fill="none" stroke="url(#metalGrad)" stroke-width="12" transform="rotate(-5.3, 221.8, 246.6)"/>
+              <ellipse cx="221.8" cy="246.6" rx="18" ry="14" fill="none" stroke="url(#metalHighlight)" stroke-width="3" transform="rotate(-5.3, 221.8, 246.6)"/>
+            
+              <ellipse cx="240.6" cy="249.6" rx="18" ry="14" fill="none" stroke="url(#metalGrad)" stroke-width="12" transform="rotate(-1.8, 240.6, 249.6)"/>
+              <ellipse cx="240.6" cy="249.6" rx="18" ry="14" fill="none" stroke="url(#metalHighlight)" stroke-width="3" transform="rotate(-1.8, 240.6, 249.6)"/>
+            
+              <ellipse cx="259.4" cy="249.6" rx="18" ry="14" fill="none" stroke="url(#metalGrad)" stroke-width="12" transform="rotate(1.8, 259.4, 249.6)"/>
+              <ellipse cx="259.4" cy="249.6" rx="18" ry="14" fill="none" stroke="url(#metalHighlight)" stroke-width="3" transform="rotate(1.8, 259.4, 249.6)"/>
+            
+              <ellipse cx="278.2" cy="246.6" rx="18" ry="14" fill="none" stroke="url(#metalGrad)" stroke-width="12" transform="rotate(5.3, 278.2, 246.6)"/>
+              <ellipse cx="278.2" cy="246.6" rx="18" ry="14" fill="none" stroke="url(#metalHighlight)" stroke-width="3" transform="rotate(5.3, 278.2, 246.6)"/>
+            
+              <ellipse cx="297.1" cy="240.5" rx="18" ry="14" fill="none" stroke="url(#metalGrad)" stroke-width="12" transform="rotate(8.8, 297.1, 240.5)"/>
+              <ellipse cx="297.1" cy="240.5" rx="18" ry="14" fill="none" stroke="url(#metalHighlight)" stroke-width="3" transform="rotate(8.8, 297.1, 240.5)"/>
+            
+              <ellipse cx="315.9" cy="231.3" rx="18" ry="14" fill="none" stroke="url(#metalGrad)" stroke-width="12" transform="rotate(12.4, 315.9, 231.3)"/>
+              <ellipse cx="315.9" cy="231.3" rx="18" ry="14" fill="none" stroke="url(#metalHighlight)" stroke-width="3" transform="rotate(12.4, 315.9, 231.3)"/>
+            
+              <ellipse cx="334.7" cy="219.2" rx="18" ry="14" fill="none" stroke="url(#metalGrad)" stroke-width="12" transform="rotate(15.9, 334.7, 219.2)"/>
+              <ellipse cx="334.7" cy="219.2" rx="18" ry="14" fill="none" stroke="url(#metalHighlight)" stroke-width="3" transform="rotate(15.9, 334.7, 219.2)"/>
+            
+              <ellipse cx="353.5" cy="203.9" rx="18" ry="14" fill="none" stroke="url(#metalGrad)" stroke-width="12" transform="rotate(19.4, 353.5, 203.9)"/>
+              <ellipse cx="353.5" cy="203.9" rx="18" ry="14" fill="none" stroke="url(#metalHighlight)" stroke-width="3" transform="rotate(19.4, 353.5, 203.9)"/>
+            
+              <ellipse cx="372.4" cy="185.7" rx="18" ry="14" fill="none" stroke="url(#metalGrad)" stroke-width="12" transform="rotate(22.9, 372.4, 185.7)"/>
+              <ellipse cx="372.4" cy="185.7" rx="18" ry="14" fill="none" stroke="url(#metalHighlight)" stroke-width="3" transform="rotate(22.9, 372.4, 185.7)"/>
+            
+              <ellipse cx="391.2" cy="164.4" rx="18" ry="14" fill="none" stroke="url(#metalGrad)" stroke-width="12" transform="rotate(26.5, 391.2, 164.4)"/>
+              <ellipse cx="391.2" cy="164.4" rx="18" ry="14" fill="none" stroke="url(#metalHighlight)" stroke-width="3" transform="rotate(26.5, 391.2, 164.4)"/>
+            
+              <ellipse cx="410.0" cy="140.0" rx="18" ry="14" fill="none" stroke="url(#metalGrad)" stroke-width="12" transform="rotate(30.0, 410.0, 140.0)"/>
+              <ellipse cx="410.0" cy="140.0" rx="18" ry="14" fill="none" stroke="url(#metalHighlight)" stroke-width="3" transform="rotate(30.0, 410.0, 140.0)"/>
+            
+        </g>
+      
+</svg>

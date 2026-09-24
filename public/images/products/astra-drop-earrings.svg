@@ -1,0 +1,105 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 500 500" width="100%" height="100%">
+  <defs>
+    
+      <linearGradient id="metalGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+        <stop offset="0%" stop-color="#FFFFFF" />
+        <stop offset="25%" stop-color="#DCE2E6" />
+        <stop offset="50%" stop-color="#A5ACB2" />
+        <stop offset="75%" stop-color="#EDF1F5" />
+        <stop offset="100%" stop-color="#6B7278" />
+      </linearGradient>
+      <linearGradient id="metalHighlight" x1="0%" y1="0%" x2="0%" y2="100%">
+        <stop offset="0%" stop-color="#FFFFFF" stop-opacity="0.95" />
+        <stop offset="50%" stop-color="#E1E6EB" stop-opacity="0.3" />
+        <stop offset="100%" stop-color="#4F565C" stop-opacity="0.8" />
+      </linearGradient>
+    
+    
+    <radialGradient id="diamondShine" cx="35%" cy="30%" r="65%">
+      <stop offset="0%" stop-color="#FFFFFF" />
+      <stop offset="30%" stop-color="#EBF5FB" />
+      <stop offset="60%" stop-color="#D4E6F1" />
+      <stop offset="85%" stop-color="#A9CCE3" />
+      <stop offset="100%" stop-color="#5DADE2" />
+    </radialGradient>
+    <radialGradient id="emeraldShine" cx="35%" cy="30%" r="65%">
+      <stop offset="0%" stop-color="#A3E4D7" />
+      <stop offset="35%" stop-color="#1ABC9C" />
+      <stop offset="70%" stop-color="#0E6251" />
+      <stop offset="100%" stop-color="#073B30" />
+    </radialGradient>
+    <radialGradient id="sapphireShine" cx="35%" cy="30%" r="65%">
+      <stop offset="0%" stop-color="#A9CCE3" />
+      <stop offset="35%" stop-color="#2471A3" />
+      <stop offset="70%" stop-color="#154360" />
+      <stop offset="100%" stop-color="#0A2233" />
+    </radialGradient>
+    <radialGradient id="pearlShine" cx="35%" cy="30%" r="60%">
+      <stop offset="0%" stop-color="#FFFFFF" />
+      <stop offset="40%" stop-color="#F7F5F0" />
+      <stop offset="75%" stop-color="#E4DDD3" />
+      <stop offset="90%" stop-color="#C2B7A7" />
+      <stop offset="100%" stop-color="#8E8271" />
+    </radialGradient>
+    <radialGradient id="tahitianPearl" cx="35%" cy="30%" r="60%">
+      <stop offset="0%" stop-color="#C7CCD1" />
+      <stop offset="35%" stop-color="#4A525A" />
+      <stop offset="70%" stop-color="#202428" />
+      <stop offset="100%" stop-color="#0F1113" />
+    </radialGradient>
+    <radialGradient id="onyxShine" cx="35%" cy="30%" r="65%">
+      <stop offset="0%" stop-color="#4B4E53" />
+      <stop offset="45%" stop-color="#1C1D1F" />
+      <stop offset="100%" stop-color="#080809" />
+    </radialGradient>
+    <filter id="softGlow" x="-20%" y="-20%" width="140%" height="140%">
+      <feGaussianBlur stdDeviation="6" result="blur" />
+      <feComposite in="SourceGraphic" in2="blur" operator="over" />
+    </filter>
+    <filter id="subtleContactShadow" x="-30%" y="-30%" width="160%" height="160%">
+      <feGaussianBlur stdDeviation="8" result="blur" />
+      <feColorMatrix type="matrix" values="0 0 0 0 0   0 0 0 0 0   0 0 0 0 0  0 0 0 0.5 0"/>
+    </filter>
+  
+  </defs>
+  <!-- 100% Transparent Background - Floating Fine Jewellery -->
+  
+        <ellipse cx="170" cy="440" rx="55" ry="12" fill="#000000" opacity="0.35" filter="url(#subtleContactShadow)"/>
+        <ellipse cx="330" cy="440" rx="55" ry="12" fill="#000000" opacity="0.35" filter="url(#subtleContactShadow)"/>
+        
+          <g transform="translate(-80, 0)">
+            <!-- Ear Stud -->
+            <circle cx="250" cy="80" r="9" fill="url(#diamondShine)" stroke="#FFF" stroke-width="1"/>
+            <!-- Articulated Links with Pavé -->
+            <line x1="250" y1="89" x2="250" y2="160" stroke="url(#metalGrad)" stroke-width="4"/>
+            <circle cx="250" cy="110" r="5" fill="url(#diamondShine)" stroke="#FFF" stroke-width="0.8"/><circle cx="250" cy="135" r="5" fill="url(#diamondShine)" stroke="#FFF" stroke-width="0.8"/><circle cx="250" cy="160" r="5" fill="url(#diamondShine)" stroke="#FFF" stroke-width="0.8"/>
+            <!-- Geometric Motif -->
+            <polygon points="250,175 268,205 250,235 232,205" fill="url(#metalGrad)"/>
+            <polygon points="250,185 260,205 250,225 240,205" fill="url(#diamondShine)"/>
+            <!-- Lower Articulated Strand -->
+            <line x1="250" y1="235" x2="250" y2="280" stroke="url(#metalGrad)" stroke-width="3"/>
+            <!-- Pear Cut Diamond Drop -->
+            <path d="M 250 280 C 230 320 220 350 220 375 C 220 395 233 410 250 410 C 267 410 280 395 280 375 C 280 350 270 320 250 280 Z" fill="url(#diamondShine)" stroke="#FFFFFF" stroke-width="1.2"/>
+            <polygon points="250,305 268,365 250,395 232,365" fill="#FFFFFF" opacity="0.6"/>
+            <circle cx="245" cy="340" r="3" fill="#FFFFFF" filter="url(#softGlow)"/>
+          </g>
+        
+          <g transform="translate(80, 0)">
+            <!-- Ear Stud -->
+            <circle cx="250" cy="80" r="9" fill="url(#diamondShine)" stroke="#FFF" stroke-width="1"/>
+            <!-- Articulated Links with Pavé -->
+            <line x1="250" y1="89" x2="250" y2="160" stroke="url(#metalGrad)" stroke-width="4"/>
+            <circle cx="250" cy="110" r="5" fill="url(#diamondShine)" stroke="#FFF" stroke-width="0.8"/><circle cx="250" cy="135" r="5" fill="url(#diamondShine)" stroke="#FFF" stroke-width="0.8"/><circle cx="250" cy="160" r="5" fill="url(#diamondShine)" stroke="#FFF" stroke-width="0.8"/>
+            <!-- Geometric Motif -->
+            <polygon points="250,175 268,205 250,235 232,205" fill="url(#metalGrad)"/>
+            <polygon points="250,185 260,205 250,225 240,205" fill="url(#diamondShine)"/>
+            <!-- Lower Articulated Strand -->
+            <line x1="250" y1="235" x2="250" y2="280" stroke="url(#metalGrad)" stroke-width="3"/>
+            <!-- Pear Cut Diamond Drop -->
+            <path d="M 250 280 C 230 320 220 350 220 375 C 220 395 233 410 250 410 C 267 410 280 395 280 375 C 280 350 270 320 250 280 Z" fill="url(#diamondShine)" stroke="#FFFFFF" stroke-width="1.2"/>
+            <polygon points="250,305 268,365 250,395 232,365" fill="#FFFFFF" opacity="0.6"/>
+            <circle cx="245" cy="340" r="3" fill="#FFFFFF" filter="url(#softGlow)"/>
+          </g>
+        
+      
+</svg>

@@ -1,0 +1,97 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 500 500" width="100%" height="100%">
+  <defs>
+    
+      <linearGradient id="metalGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+        <stop offset="0%" stop-color="#FFF5D6" />
+        <stop offset="25%" stop-color="#E5C77A" />
+        <stop offset="50%" stop-color="#C59B3F" />
+        <stop offset="75%" stop-color="#F2DE9C" />
+        <stop offset="100%" stop-color="#936D21" />
+      </linearGradient>
+      <linearGradient id="metalHighlight" x1="0%" y1="0%" x2="0%" y2="100%">
+        <stop offset="0%" stop-color="#FFFFFF" stop-opacity="0.9" />
+        <stop offset="50%" stop-color="#FFF0BE" stop-opacity="0.2" />
+        <stop offset="100%" stop-color="#6F5015" stop-opacity="0.8" />
+      </linearGradient>
+    
+    
+    <radialGradient id="diamondShine" cx="35%" cy="30%" r="65%">
+      <stop offset="0%" stop-color="#FFFFFF" />
+      <stop offset="30%" stop-color="#EBF5FB" />
+      <stop offset="60%" stop-color="#D4E6F1" />
+      <stop offset="85%" stop-color="#A9CCE3" />
+      <stop offset="100%" stop-color="#5DADE2" />
+    </radialGradient>
+    <radialGradient id="emeraldShine" cx="35%" cy="30%" r="65%">
+      <stop offset="0%" stop-color="#A3E4D7" />
+      <stop offset="35%" stop-color="#1ABC9C" />
+      <stop offset="70%" stop-color="#0E6251" />
+      <stop offset="100%" stop-color="#073B30" />
+    </radialGradient>
+    <radialGradient id="sapphireShine" cx="35%" cy="30%" r="65%">
+      <stop offset="0%" stop-color="#A9CCE3" />
+      <stop offset="35%" stop-color="#2471A3" />
+      <stop offset="70%" stop-color="#154360" />
+      <stop offset="100%" stop-color="#0A2233" />
+    </radialGradient>
+    <radialGradient id="pearlShine" cx="35%" cy="30%" r="60%">
+      <stop offset="0%" stop-color="#FFFFFF" />
+      <stop offset="40%" stop-color="#F7F5F0" />
+      <stop offset="75%" stop-color="#E4DDD3" />
+      <stop offset="90%" stop-color="#C2B7A7" />
+      <stop offset="100%" stop-color="#8E8271" />
+    </radialGradient>
+    <radialGradient id="tahitianPearl" cx="35%" cy="30%" r="60%">
+      <stop offset="0%" stop-color="#C7CCD1" />
+      <stop offset="35%" stop-color="#4A525A" />
+      <stop offset="70%" stop-color="#202428" />
+      <stop offset="100%" stop-color="#0F1113" />
+    </radialGradient>
+    <radialGradient id="onyxShine" cx="35%" cy="30%" r="65%">
+      <stop offset="0%" stop-color="#4B4E53" />
+      <stop offset="45%" stop-color="#1C1D1F" />
+      <stop offset="100%" stop-color="#080809" />
+    </radialGradient>
+    <filter id="softGlow" x="-20%" y="-20%" width="140%" height="140%">
+      <feGaussianBlur stdDeviation="6" result="blur" />
+      <feComposite in="SourceGraphic" in2="blur" operator="over" />
+    </filter>
+    <filter id="subtleContactShadow" x="-30%" y="-30%" width="160%" height="160%">
+      <feGaussianBlur stdDeviation="8" result="blur" />
+      <feColorMatrix type="matrix" values="0 0 0 0 0   0 0 0 0 0   0 0 0 0 0  0 0 0 0.5 0"/>
+    </filter>
+  
+  </defs>
+  <!-- 100% Transparent Background - Floating Fine Jewellery -->
+  
+        <!-- Floating Shadow -->
+        <ellipse cx="250" cy="420" rx="140" ry="18" fill="#000000" opacity="0.45" filter="url(#subtleContactShadow)"/>
+        <!-- Ring Band -->
+        <g transform="translate(0, 20)">
+          <!-- Outer Band Circle -->
+          <ellipse cx="250" cy="270" rx="130" ry="110" fill="none" stroke="url(#metalGrad)" stroke-width="26"/>
+          <ellipse cx="250" cy="270" rx="130" ry="110" fill="none" stroke="url(#metalHighlight)" stroke-width="6" opacity="0.75"/>
+          <!-- Inner Band Hollow -->
+          <ellipse cx="250" cy="270" rx="104" ry="86" fill="none" stroke="#2A200B" stroke-width="4" opacity="0.6"/>
+          <!-- Crown & Prongs Setting -->
+          <path d="M 230 160 L 220 120 L 235 122 L 242 155 Z" fill="url(#metalGrad)" />
+          <path d="M 270 160 L 280 120 L 265 122 L 258 155 Z" fill="url(#metalGrad)" />
+          <path d="M 215 130 L 285 130 L 275 145 L 225 145 Z" fill="url(#metalGrad)" opacity="0.9"/>
+          <!-- Brilliant Cut Solitaire Diamond -->
+          <!-- Pavilion & Girdle -->
+          <polygon points="250,75 285,115 250,148 215,115" fill="url(#diamondShine)"/>
+          <!-- Table & Crown Facets -->
+          <polygon points="235,90 265,90 280,115 220,115" fill="#FFFFFF" opacity="0.9"/>
+          <polygon points="250,75 265,90 235,90" fill="#FFFFFF" opacity="0.95"/>
+          <polygon points="265,90 285,115 280,115" fill="#CDE4F7" opacity="0.8"/>
+          <polygon points="235,90 215,115 220,115" fill="#CDE4F7" opacity="0.8"/>
+          <polygon points="250,148 240,115 260,115" fill="#A4D1F2" opacity="0.85"/>
+          <polygon points="250,148 220,115 240,115" fill="#FFFFFF" opacity="0.75"/>
+          <polygon points="250,148 260,115 280,115" fill="#88BFE8" opacity="0.8"/>
+          <!-- Brilliant Sparkle Flares -->
+          <line x1="250" y1="65" x2="250" y2="85" stroke="#FFFFFF" stroke-width="2" stroke-linecap="round"/>
+          <line x1="240" y1="75" x2="260" y2="75" stroke="#FFFFFF" stroke-width="2" stroke-linecap="round"/>
+          <circle cx="250" cy="75" r="3" fill="#FFFFFF" filter="url(#softGlow)"/>
+        </g>
+      
+</svg>

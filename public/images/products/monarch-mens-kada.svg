@@ -1,0 +1,76 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 500 500" width="100%" height="100%">
+  <defs>
+    
+      <linearGradient id="metalGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+        <stop offset="0%" stop-color="#FFF5D6" />
+        <stop offset="25%" stop-color="#E5C77A" />
+        <stop offset="50%" stop-color="#C59B3F" />
+        <stop offset="75%" stop-color="#F2DE9C" />
+        <stop offset="100%" stop-color="#936D21" />
+      </linearGradient>
+      <linearGradient id="metalHighlight" x1="0%" y1="0%" x2="0%" y2="100%">
+        <stop offset="0%" stop-color="#FFFFFF" stop-opacity="0.9" />
+        <stop offset="50%" stop-color="#FFF0BE" stop-opacity="0.2" />
+        <stop offset="100%" stop-color="#6F5015" stop-opacity="0.8" />
+      </linearGradient>
+    
+    
+    <radialGradient id="diamondShine" cx="35%" cy="30%" r="65%">
+      <stop offset="0%" stop-color="#FFFFFF" />
+      <stop offset="30%" stop-color="#EBF5FB" />
+      <stop offset="60%" stop-color="#D4E6F1" />
+      <stop offset="85%" stop-color="#A9CCE3" />
+      <stop offset="100%" stop-color="#5DADE2" />
+    </radialGradient>
+    <radialGradient id="emeraldShine" cx="35%" cy="30%" r="65%">
+      <stop offset="0%" stop-color="#A3E4D7" />
+      <stop offset="35%" stop-color="#1ABC9C" />
+      <stop offset="70%" stop-color="#0E6251" />
+      <stop offset="100%" stop-color="#073B30" />
+    </radialGradient>
+    <radialGradient id="sapphireShine" cx="35%" cy="30%" r="65%">
+      <stop offset="0%" stop-color="#A9CCE3" />
+      <stop offset="35%" stop-color="#2471A3" />
+      <stop offset="70%" stop-color="#154360" />
+      <stop offset="100%" stop-color="#0A2233" />
+    </radialGradient>
+    <radialGradient id="pearlShine" cx="35%" cy="30%" r="60%">
+      <stop offset="0%" stop-color="#FFFFFF" />
+      <stop offset="40%" stop-color="#F7F5F0" />
+      <stop offset="75%" stop-color="#E4DDD3" />
+      <stop offset="90%" stop-color="#C2B7A7" />
+      <stop offset="100%" stop-color="#8E8271" />
+    </radialGradient>
+    <radialGradient id="tahitianPearl" cx="35%" cy="30%" r="60%">
+      <stop offset="0%" stop-color="#C7CCD1" />
+      <stop offset="35%" stop-color="#4A525A" />
+      <stop offset="70%" stop-color="#202428" />
+      <stop offset="100%" stop-color="#0F1113" />
+    </radialGradient>
+    <radialGradient id="onyxShine" cx="35%" cy="30%" r="65%">
+      <stop offset="0%" stop-color="#4B4E53" />
+      <stop offset="45%" stop-color="#1C1D1F" />
+      <stop offset="100%" stop-color="#080809" />
+    </radialGradient>
+    <filter id="softGlow" x="-20%" y="-20%" width="140%" height="140%">
+      <feGaussianBlur stdDeviation="6" result="blur" />
+      <feComposite in="SourceGraphic" in2="blur" operator="over" />
+    </filter>
+    <filter id="subtleContactShadow" x="-30%" y="-30%" width="160%" height="160%">
+      <feGaussianBlur stdDeviation="8" result="blur" />
+      <feColorMatrix type="matrix" values="0 0 0 0 0   0 0 0 0 0   0 0 0 0 0  0 0 0 0.5 0"/>
+    </filter>
+  
+  </defs>
+  <!-- 100% Transparent Background - Floating Fine Jewellery -->
+  
+        <ellipse cx="250" cy="400" rx="160" ry="24" fill="#000000" opacity="0.45" filter="url(#subtleContactShadow)"/>
+        <g transform="translate(0, 20)">
+          <!-- Solid Heavy Kada -->
+          <ellipse cx="250" cy="230" rx="145" ry="100" fill="none" stroke="url(#metalGrad)" stroke-width="44"/>
+          <ellipse cx="250" cy="230" rx="145" ry="100" fill="none" stroke="url(#metalHighlight)" stroke-width="8"/>
+          <!-- Central Channel with Flush-Set Baguette Diamonds -->
+          <rect x="362.3" y="280.8" width="10" height="16" rx="2" fill="url(#diamondShine)" stroke="#FFF" stroke-width="0.5"/><rect x="350.7" y="290.5" width="10" height="16" rx="2" fill="url(#diamondShine)" stroke="#FFF" stroke-width="0.5"/><rect x="337.4" y="299.1" width="10" height="16" rx="2" fill="url(#diamondShine)" stroke="#FFF" stroke-width="0.5"/><rect x="322.7" y="306.4" width="10" height="16" rx="2" fill="url(#diamondShine)" stroke="#FFF" stroke-width="0.5"/><rect x="306.7" y="312.5" width="10" height="16" rx="2" fill="url(#diamondShine)" stroke="#FFF" stroke-width="0.5"/><rect x="289.8" y="317.1" width="10" height="16" rx="2" fill="url(#diamondShine)" stroke="#FFF" stroke-width="0.5"/><rect x="272.2" y="320.2" width="10" height="16" rx="2" fill="url(#diamondShine)" stroke="#FFF" stroke-width="0.5"/><rect x="254.1" y="321.8" width="10" height="16" rx="2" fill="url(#diamondShine)" stroke="#FFF" stroke-width="0.5"/><rect x="235.9" y="321.8" width="10" height="16" rx="2" fill="url(#diamondShine)" stroke="#FFF" stroke-width="0.5"/><rect x="217.8" y="320.2" width="10" height="16" rx="2" fill="url(#diamondShine)" stroke="#FFF" stroke-width="0.5"/><rect x="200.2" y="317.1" width="10" height="16" rx="2" fill="url(#diamondShine)" stroke="#FFF" stroke-width="0.5"/><rect x="183.3" y="312.5" width="10" height="16" rx="2" fill="url(#diamondShine)" stroke="#FFF" stroke-width="0.5"/><rect x="167.3" y="306.4" width="10" height="16" rx="2" fill="url(#diamondShine)" stroke="#FFF" stroke-width="0.5"/><rect x="152.6" y="299.1" width="10" height="16" rx="2" fill="url(#diamondShine)" stroke="#FFF" stroke-width="0.5"/><rect x="139.3" y="290.5" width="10" height="16" rx="2" fill="url(#diamondShine)" stroke="#FFF" stroke-width="0.5"/><rect x="127.7" y="280.8" width="10" height="16" rx="2" fill="url(#diamondShine)" stroke="#FFF" stroke-width="0.5"/>
+        </g>
+      
+</svg>

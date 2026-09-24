@@ -1,0 +1,97 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 500 500" width="100%" height="100%">
+  <defs>
+    
+      <linearGradient id="metalGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+        <stop offset="0%" stop-color="#FFE7E2" />
+        <stop offset="25%" stop-color="#E8A89B" />
+        <stop offset="50%" stop-color="#C97566" />
+        <stop offset="75%" stop-color="#F7C9C0" />
+        <stop offset="100%" stop-color="#9A4F41" />
+      </linearGradient>
+      <linearGradient id="metalHighlight" x1="0%" y1="0%" x2="0%" y2="100%">
+        <stop offset="0%" stop-color="#FFFFFF" stop-opacity="0.85" />
+        <stop offset="50%" stop-color="#FFD6CF" stop-opacity="0.2" />
+        <stop offset="100%" stop-color="#7C3B2F" stop-opacity="0.8" />
+      </linearGradient>
+    
+    
+    <radialGradient id="diamondShine" cx="35%" cy="30%" r="65%">
+      <stop offset="0%" stop-color="#FFFFFF" />
+      <stop offset="30%" stop-color="#EBF5FB" />
+      <stop offset="60%" stop-color="#D4E6F1" />
+      <stop offset="85%" stop-color="#A9CCE3" />
+      <stop offset="100%" stop-color="#5DADE2" />
+    </radialGradient>
+    <radialGradient id="emeraldShine" cx="35%" cy="30%" r="65%">
+      <stop offset="0%" stop-color="#A3E4D7" />
+      <stop offset="35%" stop-color="#1ABC9C" />
+      <stop offset="70%" stop-color="#0E6251" />
+      <stop offset="100%" stop-color="#073B30" />
+    </radialGradient>
+    <radialGradient id="sapphireShine" cx="35%" cy="30%" r="65%">
+      <stop offset="0%" stop-color="#A9CCE3" />
+      <stop offset="35%" stop-color="#2471A3" />
+      <stop offset="70%" stop-color="#154360" />
+      <stop offset="100%" stop-color="#0A2233" />
+    </radialGradient>
+    <radialGradient id="pearlShine" cx="35%" cy="30%" r="60%">
+      <stop offset="0%" stop-color="#FFFFFF" />
+      <stop offset="40%" stop-color="#F7F5F0" />
+      <stop offset="75%" stop-color="#E4DDD3" />
+      <stop offset="90%" stop-color="#C2B7A7" />
+      <stop offset="100%" stop-color="#8E8271" />
+    </radialGradient>
+    <radialGradient id="tahitianPearl" cx="35%" cy="30%" r="60%">
+      <stop offset="0%" stop-color="#C7CCD1" />
+      <stop offset="35%" stop-color="#4A525A" />
+      <stop offset="70%" stop-color="#202428" />
+      <stop offset="100%" stop-color="#0F1113" />
+    </radialGradient>
+    <radialGradient id="onyxShine" cx="35%" cy="30%" r="65%">
+      <stop offset="0%" stop-color="#4B4E53" />
+      <stop offset="45%" stop-color="#1C1D1F" />
+      <stop offset="100%" stop-color="#080809" />
+    </radialGradient>
+    <filter id="softGlow" x="-20%" y="-20%" width="140%" height="140%">
+      <feGaussianBlur stdDeviation="6" result="blur" />
+      <feComposite in="SourceGraphic" in2="blur" operator="over" />
+    </filter>
+    <filter id="subtleContactShadow" x="-30%" y="-30%" width="160%" height="160%">
+      <feGaussianBlur stdDeviation="8" result="blur" />
+      <feColorMatrix type="matrix" values="0 0 0 0 0   0 0 0 0 0   0 0 0 0 0  0 0 0 0.5 0"/>
+    </filter>
+  
+  </defs>
+  <!-- 100% Transparent Background - Floating Fine Jewellery -->
+  
+        <ellipse cx="250" cy="420" rx="90" ry="14" fill="#000000" opacity="0.35" filter="url(#subtleContactShadow)"/>
+        <g transform="translate(0, 0)">
+          <!-- Cascading Diamond Stars & Leaves -->
+          
+            <line x1="210" y1="360" x2="195" y2="385" stroke="url(#metalGrad)" stroke-width="3"/>
+            <polygon points="210,348 222,360 210,372 198,360" fill="url(#diamondShine)" stroke="#FFF" stroke-width="0.8"/>
+            <circle cx="208" cy="358" r="3" fill="#FFFFFF"/>
+          
+            <line x1="225" y1="305" x2="210" y2="330" stroke="url(#metalGrad)" stroke-width="3"/>
+            <polygon points="225,291 239,305 225,319 211,305" fill="url(#diamondShine)" stroke="#FFF" stroke-width="0.8"/>
+            <circle cx="223" cy="303" r="3" fill="#FFFFFF"/>
+          
+            <line x1="245" y1="245" x2="230" y2="270" stroke="url(#metalGrad)" stroke-width="3"/>
+            <polygon points="245,229 261,245 245,261 229,245" fill="url(#diamondShine)" stroke="#FFF" stroke-width="0.8"/>
+            <circle cx="243" cy="243" r="3" fill="#FFFFFF"/>
+          
+            <line x1="270" y1="185" x2="255" y2="210" stroke="url(#metalGrad)" stroke-width="3"/>
+            <polygon points="270,167 288,185 270,203 252,185" fill="url(#diamondShine)" stroke="#FFF" stroke-width="0.8"/>
+            <circle cx="268" cy="183" r="3" fill="#FFFFFF"/>
+          
+            <line x1="295" y1="125" x2="280" y2="150" stroke="url(#metalGrad)" stroke-width="3"/>
+            <polygon points="295,105 315,125 295,145 275,125" fill="url(#diamondShine)" stroke="#FFF" stroke-width="0.8"/>
+            <circle cx="293" cy="123" r="3" fill="#FFFFFF"/>
+          
+            <line x1="315" y1="75" x2="300" y2="100" stroke="url(#metalGrad)" stroke-width="3"/>
+            <polygon points="315,61 329,75 315,89 301,75" fill="url(#diamondShine)" stroke="#FFF" stroke-width="0.8"/>
+            <circle cx="313" cy="73" r="3" fill="#FFFFFF"/>
+          
+        </g>
+      
+</svg>

@@ -1,0 +1,76 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 500 500" width="100%" height="100%">
+  <defs>
+    
+      <linearGradient id="metalGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+        <stop offset="0%" stop-color="#FFFFFF" />
+        <stop offset="25%" stop-color="#DCE2E6" />
+        <stop offset="50%" stop-color="#A5ACB2" />
+        <stop offset="75%" stop-color="#EDF1F5" />
+        <stop offset="100%" stop-color="#6B7278" />
+      </linearGradient>
+      <linearGradient id="metalHighlight" x1="0%" y1="0%" x2="0%" y2="100%">
+        <stop offset="0%" stop-color="#FFFFFF" stop-opacity="0.95" />
+        <stop offset="50%" stop-color="#E1E6EB" stop-opacity="0.3" />
+        <stop offset="100%" stop-color="#4F565C" stop-opacity="0.8" />
+      </linearGradient>
+    
+    
+    <radialGradient id="diamondShine" cx="35%" cy="30%" r="65%">
+      <stop offset="0%" stop-color="#FFFFFF" />
+      <stop offset="30%" stop-color="#EBF5FB" />
+      <stop offset="60%" stop-color="#D4E6F1" />
+      <stop offset="85%" stop-color="#A9CCE3" />
+      <stop offset="100%" stop-color="#5DADE2" />
+    </radialGradient>
+    <radialGradient id="emeraldShine" cx="35%" cy="30%" r="65%">
+      <stop offset="0%" stop-color="#A3E4D7" />
+      <stop offset="35%" stop-color="#1ABC9C" />
+      <stop offset="70%" stop-color="#0E6251" />
+      <stop offset="100%" stop-color="#073B30" />
+    </radialGradient>
+    <radialGradient id="sapphireShine" cx="35%" cy="30%" r="65%">
+      <stop offset="0%" stop-color="#A9CCE3" />
+      <stop offset="35%" stop-color="#2471A3" />
+      <stop offset="70%" stop-color="#154360" />
+      <stop offset="100%" stop-color="#0A2233" />
+    </radialGradient>
+    <radialGradient id="pearlShine" cx="35%" cy="30%" r="60%">
+      <stop offset="0%" stop-color="#FFFFFF" />
+      <stop offset="40%" stop-color="#F7F5F0" />
+      <stop offset="75%" stop-color="#E4DDD3" />
+      <stop offset="90%" stop-color="#C2B7A7" />
+      <stop offset="100%" stop-color="#8E8271" />
+    </radialGradient>
+    <radialGradient id="tahitianPearl" cx="35%" cy="30%" r="60%">
+      <stop offset="0%" stop-color="#C7CCD1" />
+      <stop offset="35%" stop-color="#4A525A" />
+      <stop offset="70%" stop-color="#202428" />
+      <stop offset="100%" stop-color="#0F1113" />
+    </radialGradient>
+    <radialGradient id="onyxShine" cx="35%" cy="30%" r="65%">
+      <stop offset="0%" stop-color="#4B4E53" />
+      <stop offset="45%" stop-color="#1C1D1F" />
+      <stop offset="100%" stop-color="#080809" />
+    </radialGradient>
+    <filter id="softGlow" x="-20%" y="-20%" width="140%" height="140%">
+      <feGaussianBlur stdDeviation="6" result="blur" />
+      <feComposite in="SourceGraphic" in2="blur" operator="over" />
+    </filter>
+    <filter id="subtleContactShadow" x="-30%" y="-30%" width="160%" height="160%">
+      <feGaussianBlur stdDeviation="8" result="blur" />
+      <feColorMatrix type="matrix" values="0 0 0 0 0   0 0 0 0 0   0 0 0 0 0  0 0 0 0.5 0"/>
+    </filter>
+  
+  </defs>
+  <!-- 100% Transparent Background - Floating Fine Jewellery -->
+  
+        <ellipse cx="250" cy="430" rx="170" ry="20" fill="#000000" opacity="0.4" filter="url(#subtleContactShadow)"/>
+        <g transform="translate(0, 10)">
+          <path d="M 90 140 C 90 350 410 350 410 140" fill="none" stroke="url(#metalGrad)" stroke-width="16"/>
+          <!-- Chevron point in center -->
+          <polygon points="230,285 270,285 250,335" fill="url(#metalGrad)"/>
+          <polygon points="236,290 264,290 250,325" fill="url(#diamondShine)"/>
+          <circle cx="95.0" cy="140.0" r="4.2" fill="url(#diamondShine)" stroke="#FFF" stroke-width="0.5"/><circle cx="105.7" cy="151.7" r="4.2" fill="url(#diamondShine)" stroke="#FFF" stroke-width="0.5"/><circle cx="116.4" cy="162.5" r="4.2" fill="url(#diamondShine)" stroke="#FFF" stroke-width="0.5"/><circle cx="127.1" cy="172.5" r="4.2" fill="url(#diamondShine)" stroke="#FFF" stroke-width="0.5"/><circle cx="137.8" cy="181.6" r="4.2" fill="url(#diamondShine)" stroke="#FFF" stroke-width="0.5"/><circle cx="148.4" cy="189.9" r="4.2" fill="url(#diamondShine)" stroke="#FFF" stroke-width="0.5"/><circle cx="159.1" cy="197.4" r="4.2" fill="url(#diamondShine)" stroke="#FFF" stroke-width="0.5"/><circle cx="169.8" cy="204.1" r="4.2" fill="url(#diamondShine)" stroke="#FFF" stroke-width="0.5"/><circle cx="180.5" cy="209.9" r="4.2" fill="url(#diamondShine)" stroke="#FFF" stroke-width="0.5"/><circle cx="191.2" cy="214.9" r="4.2" fill="url(#diamondShine)" stroke="#FFF" stroke-width="0.5"/><circle cx="201.9" cy="219.1" r="4.2" fill="url(#diamondShine)" stroke="#FFF" stroke-width="0.5"/><circle cx="212.6" cy="222.4" r="4.2" fill="url(#diamondShine)" stroke="#FFF" stroke-width="0.5"/><circle cx="223.3" cy="224.9" r="4.2" fill="url(#diamondShine)" stroke="#FFF" stroke-width="0.5"/><circle cx="234.0" cy="226.6" r="4.2" fill="url(#diamondShine)" stroke="#FFF" stroke-width="0.5"/><circle cx="244.7" cy="227.4" r="4.2" fill="url(#diamondShine)" stroke="#FFF" stroke-width="0.5"/><circle cx="255.3" cy="227.4" r="4.2" fill="url(#diamondShine)" stroke="#FFF" stroke-width="0.5"/><circle cx="266.0" cy="226.6" r="4.2" fill="url(#diamondShine)" stroke="#FFF" stroke-width="0.5"/><circle cx="276.7" cy="224.9" r="4.2" fill="url(#diamondShine)" stroke="#FFF" stroke-width="0.5"/><circle cx="287.4" cy="222.4" r="4.2" fill="url(#diamondShine)" stroke="#FFF" stroke-width="0.5"/><circle cx="298.1" cy="219.1" r="4.2" fill="url(#diamondShine)" stroke="#FFF" stroke-width="0.5"/><circle cx="308.8" cy="214.9" r="4.2" fill="url(#diamondShine)" stroke="#FFF" stroke-width="0.5"/><circle cx="319.5" cy="209.9" r="4.2" fill="url(#diamondShine)" stroke="#FFF" stroke-width="0.5"/><circle cx="330.2" cy="204.1" r="4.2" fill="url(#diamondShine)" stroke="#FFF" stroke-width="0.5"/><circle cx="340.9" cy="197.4" r="4.2" fill="url(#diamondShine)" stroke="#FFF" stroke-width="0.5"/><circle cx="351.6" cy="189.9" r="4.2" fill="url(#diamondShine)" stroke="#FFF" stroke-width="0.5"/><circle cx="362.2" cy="181.6" r="4.2" fill="url(#diamondShine)" stroke="#FFF" stroke-width="0.5"/><circle cx="372.9" cy="172.5" r="4.2" fill="url(#diamondShine)" stroke="#FFF" stroke-width="0.5"/><circle cx="383.6" cy="162.5" r="4.2" fill="url(#diamondShine)" stroke="#FFF" stroke-width="0.5"/><circle cx="394.3" cy="151.7" r="4.2" fill="url(#diamondShine)" stroke="#FFF" stroke-width="0.5"/><circle cx="405.0" cy="140.0" r="4.2" fill="url(#diamondShine)" stroke="#FFF" stroke-width="0.5"/>
+        </g>
+      
+</svg>

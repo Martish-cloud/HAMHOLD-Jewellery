@@ -1,0 +1,183 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 500 500" width="100%" height="100%">
+  <defs>
+    
+      <linearGradient id="metalGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+        <stop offset="0%" stop-color="#FFFFFF" />
+        <stop offset="25%" stop-color="#DCE2E6" />
+        <stop offset="50%" stop-color="#A5ACB2" />
+        <stop offset="75%" stop-color="#EDF1F5" />
+        <stop offset="100%" stop-color="#6B7278" />
+      </linearGradient>
+      <linearGradient id="metalHighlight" x1="0%" y1="0%" x2="0%" y2="100%">
+        <stop offset="0%" stop-color="#FFFFFF" stop-opacity="0.95" />
+        <stop offset="50%" stop-color="#E1E6EB" stop-opacity="0.3" />
+        <stop offset="100%" stop-color="#4F565C" stop-opacity="0.8" />
+      </linearGradient>
+    
+    
+    <radialGradient id="diamondShine" cx="35%" cy="30%" r="65%">
+      <stop offset="0%" stop-color="#FFFFFF" />
+      <stop offset="30%" stop-color="#EBF5FB" />
+      <stop offset="60%" stop-color="#D4E6F1" />
+      <stop offset="85%" stop-color="#A9CCE3" />
+      <stop offset="100%" stop-color="#5DADE2" />
+    </radialGradient>
+    <radialGradient id="emeraldShine" cx="35%" cy="30%" r="65%">
+      <stop offset="0%" stop-color="#A3E4D7" />
+      <stop offset="35%" stop-color="#1ABC9C" />
+      <stop offset="70%" stop-color="#0E6251" />
+      <stop offset="100%" stop-color="#073B30" />
+    </radialGradient>
+    <radialGradient id="sapphireShine" cx="35%" cy="30%" r="65%">
+      <stop offset="0%" stop-color="#A9CCE3" />
+      <stop offset="35%" stop-color="#2471A3" />
+      <stop offset="70%" stop-color="#154360" />
+      <stop offset="100%" stop-color="#0A2233" />
+    </radialGradient>
+    <radialGradient id="pearlShine" cx="35%" cy="30%" r="60%">
+      <stop offset="0%" stop-color="#FFFFFF" />
+      <stop offset="40%" stop-color="#F7F5F0" />
+      <stop offset="75%" stop-color="#E4DDD3" />
+      <stop offset="90%" stop-color="#C2B7A7" />
+      <stop offset="100%" stop-color="#8E8271" />
+    </radialGradient>
+    <radialGradient id="tahitianPearl" cx="35%" cy="30%" r="60%">
+      <stop offset="0%" stop-color="#C7CCD1" />
+      <stop offset="35%" stop-color="#4A525A" />
+      <stop offset="70%" stop-color="#202428" />
+      <stop offset="100%" stop-color="#0F1113" />
+    </radialGradient>
+    <radialGradient id="onyxShine" cx="35%" cy="30%" r="65%">
+      <stop offset="0%" stop-color="#4B4E53" />
+      <stop offset="45%" stop-color="#1C1D1F" />
+      <stop offset="100%" stop-color="#080809" />
+    </radialGradient>
+    <filter id="softGlow" x="-20%" y="-20%" width="140%" height="140%">
+      <feGaussianBlur stdDeviation="6" result="blur" />
+      <feComposite in="SourceGraphic" in2="blur" operator="over" />
+    </filter>
+    <filter id="subtleContactShadow" x="-30%" y="-30%" width="160%" height="160%">
+      <feGaussianBlur stdDeviation="8" result="blur" />
+      <feColorMatrix type="matrix" values="0 0 0 0 0   0 0 0 0 0   0 0 0 0 0  0 0 0 0.5 0"/>
+    </filter>
+  
+  </defs>
+  <!-- 100% Transparent Background - Floating Fine Jewellery -->
+  
+        <ellipse cx="250" cy="430" rx="170" ry="20" fill="#000000" opacity="0.4" filter="url(#subtleContactShadow)"/>
+        <g transform="translate(0, 10)">
+          <!-- Flowing Platinum Collar Arc -->
+          <path d="M 80 120 C 80 340 420 340 420 120" fill="none" stroke="url(#metalGrad)" stroke-width="12"/>
+          <!-- 48 Brilliant Pavé Diamonds Along Strand -->
+          
+              <circle cx="80.0" cy="120.0" r="4.8" fill="url(#diamondShine)" stroke="#FFFFFF" stroke-width="0.8"/>
+              <circle cx="79.0" cy="119.0" r="1.5" fill="#FFFFFF"/>
+            
+              <circle cx="89.7" cy="134.4" r="5.0" fill="url(#diamondShine)" stroke="#FFFFFF" stroke-width="0.8"/>
+              <circle cx="88.7" cy="133.4" r="1.5" fill="#FFFFFF"/>
+            
+              <circle cx="99.4" cy="148.0" r="5.2" fill="url(#diamondShine)" stroke="#FFFFFF" stroke-width="0.8"/>
+              <circle cx="98.4" cy="147.0" r="1.5" fill="#FFFFFF"/>
+            
+              <circle cx="109.1" cy="160.8" r="5.5" fill="url(#diamondShine)" stroke="#FFFFFF" stroke-width="0.8"/>
+              <circle cx="108.1" cy="159.8" r="1.5" fill="#FFFFFF"/>
+            
+              <circle cx="118.9" cy="172.6" r="5.7" fill="url(#diamondShine)" stroke="#FFFFFF" stroke-width="0.8"/>
+              <circle cx="117.9" cy="171.6" r="1.5" fill="#FFFFFF"/>
+            
+              <circle cx="128.6" cy="183.7" r="5.9" fill="url(#diamondShine)" stroke="#FFFFFF" stroke-width="0.8"/>
+              <circle cx="127.6" cy="182.7" r="1.5" fill="#FFFFFF"/>
+            
+              <circle cx="138.3" cy="193.9" r="6.1" fill="url(#diamondShine)" stroke="#FFFFFF" stroke-width="0.8"/>
+              <circle cx="137.3" cy="192.9" r="1.5" fill="#FFFFFF"/>
+            
+              <circle cx="148.0" cy="203.2" r="6.3" fill="url(#diamondShine)" stroke="#FFFFFF" stroke-width="0.8"/>
+              <circle cx="147.0" cy="202.2" r="1.5" fill="#FFFFFF"/>
+            
+              <circle cx="157.7" cy="211.7" r="6.4" fill="url(#diamondShine)" stroke="#FFFFFF" stroke-width="0.8"/>
+              <circle cx="156.7" cy="210.7" r="1.5" fill="#FFFFFF"/>
+            
+              <circle cx="167.4" cy="219.3" r="6.6" fill="url(#diamondShine)" stroke="#FFFFFF" stroke-width="0.8"/>
+              <circle cx="166.4" cy="218.3" r="1.5" fill="#FFFFFF"/>
+            
+              <circle cx="177.1" cy="226.1" r="6.8" fill="url(#diamondShine)" stroke="#FFFFFF" stroke-width="0.8"/>
+              <circle cx="176.1" cy="225.1" r="1.5" fill="#FFFFFF"/>
+            
+              <circle cx="186.9" cy="232.1" r="6.9" fill="url(#diamondShine)" stroke="#FFFFFF" stroke-width="0.8"/>
+              <circle cx="185.9" cy="231.1" r="1.5" fill="#FFFFFF"/>
+            
+              <circle cx="196.6" cy="237.2" r="7.0" fill="url(#diamondShine)" stroke="#FFFFFF" stroke-width="0.8"/>
+              <circle cx="195.6" cy="236.2" r="1.5" fill="#FFFFFF"/>
+            
+              <circle cx="206.3" cy="241.4" r="7.1" fill="url(#diamondShine)" stroke="#FFFFFF" stroke-width="0.8"/>
+              <circle cx="205.3" cy="240.4" r="1.5" fill="#FFFFFF"/>
+            
+              <circle cx="216.0" cy="244.8" r="7.2" fill="url(#diamondShine)" stroke="#FFFFFF" stroke-width="0.8"/>
+              <circle cx="215.0" cy="243.8" r="1.5" fill="#FFFFFF"/>
+            
+              <circle cx="225.7" cy="247.3" r="7.2" fill="url(#diamondShine)" stroke="#FFFFFF" stroke-width="0.8"/>
+              <circle cx="224.7" cy="246.3" r="1.5" fill="#FFFFFF"/>
+            
+              <circle cx="235.4" cy="249.0" r="7.3" fill="url(#diamondShine)" stroke="#FFFFFF" stroke-width="0.8"/>
+              <circle cx="234.4" cy="248.0" r="1.5" fill="#FFFFFF"/>
+            
+              <circle cx="245.1" cy="249.9" r="7.3" fill="url(#diamondShine)" stroke="#FFFFFF" stroke-width="0.8"/>
+              <circle cx="244.1" cy="248.9" r="1.5" fill="#FFFFFF"/>
+            
+              <circle cx="254.9" cy="249.9" r="7.3" fill="url(#diamondShine)" stroke="#FFFFFF" stroke-width="0.8"/>
+              <circle cx="253.9" cy="248.9" r="1.5" fill="#FFFFFF"/>
+            
+              <circle cx="264.6" cy="249.0" r="7.3" fill="url(#diamondShine)" stroke="#FFFFFF" stroke-width="0.8"/>
+              <circle cx="263.6" cy="248.0" r="1.5" fill="#FFFFFF"/>
+            
+              <circle cx="274.3" cy="247.3" r="7.2" fill="url(#diamondShine)" stroke="#FFFFFF" stroke-width="0.8"/>
+              <circle cx="273.3" cy="246.3" r="1.5" fill="#FFFFFF"/>
+            
+              <circle cx="284.0" cy="244.8" r="7.2" fill="url(#diamondShine)" stroke="#FFFFFF" stroke-width="0.8"/>
+              <circle cx="283.0" cy="243.8" r="1.5" fill="#FFFFFF"/>
+            
+              <circle cx="293.7" cy="241.4" r="7.1" fill="url(#diamondShine)" stroke="#FFFFFF" stroke-width="0.8"/>
+              <circle cx="292.7" cy="240.4" r="1.5" fill="#FFFFFF"/>
+            
+              <circle cx="303.4" cy="237.2" r="7.0" fill="url(#diamondShine)" stroke="#FFFFFF" stroke-width="0.8"/>
+              <circle cx="302.4" cy="236.2" r="1.5" fill="#FFFFFF"/>
+            
+              <circle cx="313.1" cy="232.1" r="6.9" fill="url(#diamondShine)" stroke="#FFFFFF" stroke-width="0.8"/>
+              <circle cx="312.1" cy="231.1" r="1.5" fill="#FFFFFF"/>
+            
+              <circle cx="322.9" cy="226.1" r="6.8" fill="url(#diamondShine)" stroke="#FFFFFF" stroke-width="0.8"/>
+              <circle cx="321.9" cy="225.1" r="1.5" fill="#FFFFFF"/>
+            
+              <circle cx="332.6" cy="219.3" r="6.6" fill="url(#diamondShine)" stroke="#FFFFFF" stroke-width="0.8"/>
+              <circle cx="331.6" cy="218.3" r="1.5" fill="#FFFFFF"/>
+            
+              <circle cx="342.3" cy="211.7" r="6.4" fill="url(#diamondShine)" stroke="#FFFFFF" stroke-width="0.8"/>
+              <circle cx="341.3" cy="210.7" r="1.5" fill="#FFFFFF"/>
+            
+              <circle cx="352.0" cy="203.2" r="6.3" fill="url(#diamondShine)" stroke="#FFFFFF" stroke-width="0.8"/>
+              <circle cx="351.0" cy="202.2" r="1.5" fill="#FFFFFF"/>
+            
+              <circle cx="361.7" cy="193.9" r="6.1" fill="url(#diamondShine)" stroke="#FFFFFF" stroke-width="0.8"/>
+              <circle cx="360.7" cy="192.9" r="1.5" fill="#FFFFFF"/>
+            
+              <circle cx="371.4" cy="183.7" r="5.9" fill="url(#diamondShine)" stroke="#FFFFFF" stroke-width="0.8"/>
+              <circle cx="370.4" cy="182.7" r="1.5" fill="#FFFFFF"/>
+            
+              <circle cx="381.1" cy="172.6" r="5.7" fill="url(#diamondShine)" stroke="#FFFFFF" stroke-width="0.8"/>
+              <circle cx="380.1" cy="171.6" r="1.5" fill="#FFFFFF"/>
+            
+              <circle cx="390.9" cy="160.8" r="5.5" fill="url(#diamondShine)" stroke="#FFFFFF" stroke-width="0.8"/>
+              <circle cx="389.9" cy="159.8" r="1.5" fill="#FFFFFF"/>
+            
+              <circle cx="400.6" cy="148.0" r="5.2" fill="url(#diamondShine)" stroke="#FFFFFF" stroke-width="0.8"/>
+              <circle cx="399.6" cy="147.0" r="1.5" fill="#FFFFFF"/>
+            
+              <circle cx="410.3" cy="134.4" r="5.0" fill="url(#diamondShine)" stroke="#FFFFFF" stroke-width="0.8"/>
+              <circle cx="409.3" cy="133.4" r="1.5" fill="#FFFFFF"/>
+            
+              <circle cx="420.0" cy="120.0" r="4.8" fill="url(#diamondShine)" stroke="#FFFFFF" stroke-width="0.8"/>
+              <circle cx="419.0" cy="119.0" r="1.5" fill="#FFFFFF"/>
+            
+        </g>
+      
+</svg>
