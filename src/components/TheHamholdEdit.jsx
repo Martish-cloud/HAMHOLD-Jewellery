@@ -9,14 +9,14 @@ export default function TheHamholdEdit() {
   const lookbookImages = [
     {
       id: '01',
-      title: '01 — THE SIGNATURE EDIT',
-      subtitle: 'Sculpted in 18K solid gold, Polki diamonds & royal emeralds',
-      tag: 'Grand Atelier',
-      src: '/images/editorial/the-hamhold-edit/hamhold-edit-01.webp',
-      srcMobile: '/images/editorial/the-hamhold-edit/hamhold-edit-01-mobile.webp',
+      title: '01 — TIMELESS ADORNMENT',
+      subtitle: 'Heirloom silhouettes designed to transcend generations',
+      tag: 'Heritage Collection',
+      src: '/images/editorial/the-hamhold-edit/hamhold-edit-03.webp',
+      srcMobile: '/images/editorial/the-hamhold-edit/hamhold-edit-03-mobile.webp',
       aspect: 'aspect-[16/11]',
-      focal: 'object-[center_35%]',
-      alt: 'HAMHOLD Fine Jewellery Editorial Campaign'
+      focal: 'object-[50%_28%]',
+      alt: 'HAMHOLD Heritage Jewellery Editorial'
     },
     {
       id: '02',
@@ -31,14 +31,14 @@ export default function TheHamholdEdit() {
     },
     {
       id: '03',
-      title: '03 — TIMELESS ADORNMENT',
-      subtitle: 'Heirloom silhouettes designed to transcend generations',
-      tag: 'Heritage Collection',
-      src: '/images/editorial/the-hamhold-edit/hamhold-edit-03.webp',
-      srcMobile: '/images/editorial/the-hamhold-edit/hamhold-edit-03-mobile.webp',
+      title: '03 — THE SIGNATURE EDIT',
+      subtitle: 'Sculpted in 18K solid gold, Polki diamonds & royal emeralds',
+      tag: 'Grand Atelier',
+      src: '/images/editorial/the-hamhold-edit/hamhold-edit-01.webp',
+      srcMobile: '/images/editorial/the-hamhold-edit/hamhold-edit-01-mobile.webp',
       aspect: 'aspect-[16/10]',
-      focal: 'object-[50%_28%]',
-      alt: 'HAMHOLD Heritage Jewellery Editorial'
+      focal: 'object-[center_35%]',
+      alt: 'HAMHOLD Fine Jewellery Editorial Campaign'
     }
   ];
 

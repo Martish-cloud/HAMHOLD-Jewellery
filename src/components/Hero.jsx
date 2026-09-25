@@ -74,33 +74,42 @@ export default function Hero() {
           </div>
         </div>
 
-        {/* Right Column: Hero Floating Jewellery Masterpiece (Transparent Background) */}
+        {/* Right Column: Hero Floating Jewellery Masterpiece integrated with Circular Rings */}
         <div className="lg:col-span-5 relative flex items-center justify-center">
-          {/* Circular Architectural Halo */}
-          <div className="relative w-[320px] sm:w-[420px] lg:w-[460px] aspect-square rounded-full border border-champagne/20 flex items-center justify-center p-8 bg-gradient-radial from-espresso/40 via-obsidian-card/60 to-transparent">
-            {/* Concentric subtle rings */}
-            <div className="absolute inset-4 rounded-full border border-champagne/10 border-dashed animate-[spin_60s_linear_infinite]" />
-            <div className="absolute inset-14 rounded-full border border-champagne/15" />
+          {/* Circular Architectural Halo & Frame System */}
+          <div className="relative w-[300px] sm:w-[400px] lg:w-[450px] aspect-square rounded-full border border-champagne/20 flex items-center justify-center p-6 sm:p-8 bg-gradient-radial from-espresso/40 via-obsidian-card/60 to-transparent shadow-2xl">
+            {/* Concentric subtle decorative rings surrounding the circular frame */}
+            <div className="absolute inset-2 sm:inset-3 rounded-full border border-champagne/15 border-dashed animate-[spin_80s_linear_infinite] pointer-events-none" />
+            <div className="absolute inset-6 sm:inset-8 rounded-full border border-champagne/20 pointer-events-none" />
 
-            {/* Glowing Backdrop behind jewellery */}
-            <div className="absolute w-48 h-48 rounded-full bg-champagne/15 blur-2xl pointer-events-none" />
+            {/* Ambient Radial Glow behind circular image */}
+            <div className="absolute w-48 h-48 sm:w-64 sm:h-64 rounded-full bg-champagne/15 blur-3xl pointer-events-none" />
 
-            {/* Hero Floating Solitaire Diamond Ring */}
-            <img
-              src="/images/jewellery/women/aurelia-solitaire-ring.webp"
-              onError={(e) => {
-                e.currentTarget.src = "/images/products/aurelia-solitaire-ring.svg";
-              }}
-              alt="HAMHOLD Aurelia Solitaire Diamond Ring"
-              loading="lazy"
-              decoding="async"
-              className="relative z-10 w-full h-full object-contain filter drop-shadow-[0_25px_35px_rgba(0,0,0,0.85)] hover:scale-105 transition-transform duration-700 cursor-pointer"
+            {/* Circular Hero Image Frame Integrated with Concentric Rings */}
+            <div
               onClick={() => navigateToCatalogue()}
               data-cursor="view"
-            />
+              className="group relative z-10 w-[220px] sm:w-[280px] lg:w-[320px] aspect-square rounded-full overflow-hidden border-2 border-champagne/40 hover:border-champagne transition-all duration-700 shadow-luxury cursor-pointer bg-obsidian"
+            >
+              <img
+                src="/images/jewellery/women/aurelia-solitaire-ring.webp"
+                onError={(e) => {
+                  e.currentTarget.src = "/images/products/aurelia-solitaire-ring.svg";
+                }}
+                alt="HAMHOLD Aurelia Solitaire Diamond Ring"
+                loading="eager"
+                decoding="async"
+                width="600"
+                height="600"
+                className="w-full h-full object-cover object-[center_35%] transform transition-transform duration-700 ease-out group-hover:scale-105"
+              />
+
+              {/* Inner Luxury Vignette Overlay */}
+              <div className="absolute inset-0 rounded-full bg-gradient-to-t from-obsidian/60 via-transparent to-obsidian/20 pointer-events-none" />
+            </div>
 
             {/* Floating Editorial Badge (Bottom right) */}
-            <div className="absolute -bottom-4 right-0 sm:right-6 z-20 px-4 py-3 rounded-xl bg-obsidian-surface/95 border border-champagne/30 backdrop-blur-xl shadow-2xl max-w-[210px] text-left">
+            <div className="absolute -bottom-3 sm:bottom-0 right-0 sm:right-4 z-20 px-4 py-3 rounded-xl bg-obsidian-surface/95 border border-champagne/30 backdrop-blur-xl shadow-2xl max-w-[210px] text-left">
               <span className="text-[9px] uppercase tracking-widest text-champagne font-semibold block mb-0.5">
                 Signature Piece
               </span>
