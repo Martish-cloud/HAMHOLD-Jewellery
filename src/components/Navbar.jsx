@@ -2,6 +2,7 @@ import React, { useState, useEffect } from 'react';
 import { Search, Heart, ShoppingBag, Menu, X, User, ChevronDown } from 'lucide-react';
 import { useShop } from '../context/ShopContext';
 import { COLLECTIONS, CATEGORIES } from '../data/products';
+import { BlurWipeText } from './TextAnimations';
 
 export default function Navbar() {
   const {
@@ -56,7 +57,7 @@ export default function Navbar() {
               className="group text-left"
             >
               <span className="font-serif-luxury text-2xl md:text-3xl tracking-[0.22em] font-medium text-ivory group-hover:text-champagne transition-colors duration-300">
-                HAMHOLD
+                <BlurWipeText text="HAMHOLD" />
               </span>
               <span className="block text-[8px] md:text-[9px] tracking-[0.35em] text-champagne/80 font-sans uppercase -mt-0.5">
                 CRAFTED TO HOLD FOREVER

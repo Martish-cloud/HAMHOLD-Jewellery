@@ -1,5 +1,6 @@
 import React from 'react';
 import { Compass, Hammer, Sparkles, Gem, CheckCircle } from 'lucide-react';
+import { NeonTypewriterText } from './TextAnimations';
 
 export default function Craftsmanship() {
   const steps = [
@@ -47,7 +48,7 @@ export default function Craftsmanship() {
             The Atelier Standard
           </span>
           <h2 className="font-serif-luxury text-3xl sm:text-4xl md:text-5xl text-ivory tracking-[0.03em] font-normal mb-4">
-            CRAFTED WITH INTENTION.
+            <NeonTypewriterText text="CRAFTED WITH INTENTION." />
           </h2>
           <p className="text-ivory-muted text-xs sm:text-sm font-sans font-light leading-relaxed">
             The bridge between centuries of classical goldsmithing knowledge and modern precision fine jewellery engineering.

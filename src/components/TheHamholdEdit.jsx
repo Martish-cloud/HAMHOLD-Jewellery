@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { ArrowRight, Eye, X, ChevronLeft, ChevronRight, Sparkles } from 'lucide-react';
 import { useShop } from '../context/ShopContext';
+import { BlurWipeText } from './TextAnimations';
 
 export default function TheHamholdEdit() {
   const { navigateToCatalogue } = useShop();
@@ -74,7 +75,7 @@ export default function TheHamholdEdit() {
             <span>Editorial Lookbook</span>
           </div>
           <h2 className="font-serif-luxury text-3xl sm:text-5xl md:text-6xl text-ivory tracking-[0.03em] font-normal leading-[1.08] mb-4">
-            THE HAMHOLD EDIT
+            <BlurWipeText text="THE HAMHOLD EDIT" />
           </h2>
           <p className="text-ivory-soft/85 text-xs sm:text-sm md:text-base font-sans font-light tracking-wide leading-relaxed">
             A study in light, craftsmanship, and timeless adornment.

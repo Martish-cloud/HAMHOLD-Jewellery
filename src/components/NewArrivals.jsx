@@ -3,6 +3,7 @@ import { PRODUCTS } from '../data/products';
 import ProductCard from './ProductCard';
 import { useShop } from '../context/ShopContext';
 import { ArrowRight } from 'lucide-react';
+import { NeonTypewriterText } from './TextAnimations';
 
 export default function NewArrivals() {
   const { navigateToCatalogue } = useShop();
@@ -20,7 +21,7 @@ export default function NewArrivals() {
               Fresh From The Atelier
             </span>
             <h2 className="font-serif-luxury text-3xl sm:text-4xl md:text-5xl text-ivory tracking-[0.03em] font-normal">
-              NEW ARRIVALS
+              <NeonTypewriterText text="NEW ARRIVALS" />
             </h2>
           </div>
           <button

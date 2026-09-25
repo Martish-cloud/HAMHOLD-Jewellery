@@ -3,6 +3,7 @@ import { PRODUCTS } from '../data/products';
 import ProductCard from './ProductCard';
 import { useShop } from '../context/ShopContext';
 import { ArrowRight, Shield } from 'lucide-react';
+import { BlurWipeText } from './TextAnimations';
 
 export default function ForHimSection() {
   const { navigateToCatalogue } = useShop();
@@ -31,7 +32,7 @@ export default function ForHimSection() {
                 Brand Ambassador Édition
               </span>
               <h2 className="font-serif-luxury text-3xl sm:text-4xl md:text-5xl text-ivory tracking-[0.03em] font-normal leading-[1.12] mb-3">
-                FOR HIM
+                <BlurWipeText text="FOR HIM" />
               </h2>
               <div className="font-serif text-lg sm:text-xl text-champagne italic font-light mb-4">
                 Timeless Elegance • Premium Jewellery for Men

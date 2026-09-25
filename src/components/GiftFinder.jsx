@@ -3,6 +3,7 @@ import { PRODUCTS } from '../data/products';
 import ProductCard from './ProductCard';
 import { useShop } from '../context/ShopContext';
 import { Gift, ArrowRight } from 'lucide-react';
+import { NeonTypewriterText } from './TextAnimations';
 
 export default function GiftFinder() {
   const { navigateToCatalogue } = useShop();
@@ -50,7 +51,7 @@ export default function GiftFinder() {
             <span>Interactive Gift Atelier</span>
           </div>
           <h2 className="font-serif-luxury text-3xl sm:text-4xl md:text-5xl text-ivory tracking-[0.03em] font-normal mb-3">
-            FIND SOMETHING THEY'LL NEVER FORGET.
+            <NeonTypewriterText text="FIND SOMETHING THEY'LL NEVER FORGET." />
           </h2>
           <p className="text-ivory-muted/80 text-xs sm:text-sm font-sans font-light leading-relaxed">
             Select your preferences below to discover bespoke creations tailored for that unforgettable milestone.

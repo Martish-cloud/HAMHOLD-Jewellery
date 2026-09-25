@@ -2,6 +2,7 @@ import React from 'react';
 import { CATEGORIES } from '../data/products';
 import { useShop } from '../context/ShopContext';
 import { ArrowRight } from 'lucide-react';
+import { GhostInterleapText } from './TextAnimations';
 
 export default function ShopByCategory() {
   const { navigateToCatalogue } = useShop();
@@ -19,7 +20,7 @@ export default function ShopByCategory() {
               Curated Architecture
             </span>
             <h2 className="font-serif-luxury text-3xl sm:text-4xl md:text-5xl text-ivory tracking-[0.03em] font-normal">
-              DISCOVER YOUR SIGNATURE
+              <GhostInterleapText text="DISCOVER YOUR SIGNATURE" />
             </h2>
           </div>
           <button

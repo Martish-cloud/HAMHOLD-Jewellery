@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import { COLLECTIONS, PRODUCTS } from '../data/products';
 import { useShop } from '../context/ShopContext';
 import { ArrowRight, Sparkles } from 'lucide-react';
+import { GhostInterleapText } from './TextAnimations';
 
 export default function CollectionsSection() {
   const { navigateToCatalogue, setSelectedProduct } = useShop();
@@ -27,7 +28,7 @@ export default function CollectionsSection() {
             Midnight Atelier Series
           </span>
           <h2 className="font-serif-luxury text-3xl sm:text-4xl md:text-5xl text-ivory tracking-[0.03em] font-normal mb-4">
-            THE HAMHOLD COLLECTIONS
+            <GhostInterleapText text="THE HAMHOLD COLLECTIONS" />
           </h2>
           <p className="text-ivory-muted/80 text-xs sm:text-sm font-sans font-light leading-relaxed">
             Each collection represents a distinct exploration of light, geometry, and eternal emotion.
@@ -64,7 +65,7 @@ export default function CollectionsSection() {
                 <span>Collection Spotlight</span>
               </div>
               <h3 className="font-serif-luxury text-3xl sm:text-4xl text-ivory mb-3 font-normal">
-                {currentCollection.name} Collection
+                <GhostInterleapText>{currentCollection.name} Collection</GhostInterleapText>
               </h3>
               <p className="text-champagne text-sm sm:text-base font-serif italic mb-5">
                 "{currentCollection.tagline}"

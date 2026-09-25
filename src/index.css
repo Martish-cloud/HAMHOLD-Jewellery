@@ -166,3 +166,138 @@
     display: none !important;
   }
 }
+
+/* ==========================================================================
+   PREMIUM TYPOGRAPHY ANIMATIONS
+   - Blur Wipe Text Effect
+   - Ghost Interleap Text Effect
+   ========================================================================== */
+
+/* 1. Blur Wipe Keyframes & Classes */
+@keyframes blurWipe {
+  0% {
+    opacity: 0.1;
+    filter: blur(14px);
+    -webkit-mask-image: linear-gradient(to right, black 0%, black 25%, transparent 65%);
+    mask-image: linear-gradient(to right, black 0%, black 25%, transparent 65%);
+    -webkit-mask-size: 250% 100%;
+    mask-size: 250% 100%;
+    -webkit-mask-position: 100% 0;
+    mask-position: 100% 0;
+    transform: translate3d(-6px, 0, 0);
+  }
+  45% {
+    opacity: 0.85;
+    filter: blur(6px);
+    -webkit-mask-position: 45% 0;
+    mask-position: 45% 0;
+  }
+  100% {
+    opacity: 1;
+    filter: blur(0px);
+    -webkit-mask-position: 0% 0;
+    mask-position: 0% 0;
+    transform: translate3d(0, 0, 0);
+  }
+}
+
+.animate-blur-wipe {
+  animation: blurWipe 1.15s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+  will-change: filter, opacity, transform;
+}
+
+/* 2. Ghost Interleap Keyframes & Classes */
+@keyframes ghostConverge1 {
+  0% {
+    opacity: 0;
+    transform: translate3d(-18px, -4px, 0);
+    filter: blur(3px);
+  }
+  25% {
+    opacity: 0.32;
+    transform: translate3d(-10px, -2px, 0);
+    filter: blur(2px);
+  }
+  70% {
+    opacity: 0.12;
+    transform: translate3d(-3px, -1px, 0);
+    filter: blur(0.8px);
+  }
+  100% {
+    opacity: 0;
+    transform: translate3d(0, 0, 0);
+    filter: blur(0px);
+  }
+}
+
+@keyframes ghostConverge2 {
+  0% {
+    opacity: 0;
+    transform: translate3d(18px, 4px, 0);
+    filter: blur(3px);
+  }
+  25% {
+    opacity: 0.22;
+    transform: translate3d(10px, 2px, 0);
+    filter: blur(2px);
+  }
+  70% {
+    opacity: 0.08;
+    transform: translate3d(3px, 1px, 0);
+    filter: blur(0.8px);
+  }
+  100% {
+    opacity: 0;
+    transform: translate3d(0, 0, 0);
+    filter: blur(0px);
+  }
+}
+
+@keyframes ghostMain {
+  0% {
+    opacity: 0;
+    transform: translate3d(0, 6px, 0);
+    filter: blur(1.5px);
+  }
+  60% {
+    opacity: 0.85;
+    transform: translate3d(0, 2px, 0);
+    filter: blur(0.5px);
+  }
+  100% {
+    opacity: 1;
+    transform: translate3d(0, 0, 0);
+    filter: blur(0px);
+  }
+}
+
+.animate-ghost-converge-1 {
+  animation: ghostConverge1 1.2s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+  will-change: transform, opacity, filter;
+}
+
+.animate-ghost-converge-2 {
+  animation: ghostConverge2 1.2s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+  will-change: transform, opacity, filter;
+}
+
+.animate-ghost-main {
+  animation: ghostMain 1.2s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+  will-change: transform, opacity, filter;
+}
+
+/* Reduced Motion Override for Accessibility */
+@media (prefers-reduced-motion: reduce) {
+  .animate-blur-wipe,
+  .animate-ghost-converge-1,
+  .animate-ghost-converge-2,
+  .animate-ghost-main {
+    animation: none !important;
+    filter: none !important;
+    -webkit-mask-image: none !important;
+    mask-image: none !important;
+    opacity: 1 !important;
+    transform: none !important;
+  }
+}
+

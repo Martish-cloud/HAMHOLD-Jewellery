@@ -1,6 +1,7 @@
 import React from 'react';
 import { ArrowRight, Sparkles, Gem, ShieldCheck, Clock } from 'lucide-react';
 import { useShop } from '../context/ShopContext';
+import { NeonTypewriterText } from './TextAnimations';
 
 export default function PrivateOffers() {
   const { navigateToCatalogue } = useShop();
@@ -19,7 +20,7 @@ export default function PrivateOffers() {
             <span>Atelier Privileges</span>
           </div>
           <h2 className="font-serif-luxury text-3xl sm:text-4xl md:text-5xl text-ivory tracking-[0.03em] font-normal mb-3">
-            PRIVATE JEWELLERY OFFERS
+            <NeonTypewriterText text="PRIVATE JEWELLERY OFFERS" />
           </h2>
           <p className="text-ivory-soft/85 text-xs sm:text-sm md:text-base font-sans font-light tracking-wide">
             Curated pieces. Exclusive privileges.

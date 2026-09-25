@@ -2,6 +2,7 @@ import React from 'react';
 import { Home, Grid, Search, Heart, ShoppingBag, X, ChevronRight, Sparkles, ShieldCheck } from 'lucide-react';
 import { useShop } from '../context/ShopContext';
 import { CATEGORIES, COLLECTIONS } from '../data/products';
+import { BlurWipeText } from './TextAnimations';
 
 export default function MobileNav() {
   const {
@@ -42,7 +43,7 @@ export default function MobileNav() {
               <div className="flex items-center justify-between pb-6 border-b border-champagne/15">
                 <div>
                   <span className="font-serif-luxury text-xl tracking-[0.2em] font-medium text-ivory">
-                    HAMHOLD
+                    <BlurWipeText text="HAMHOLD" />
                   </span>
                   <span className="block text-[8px] tracking-[0.3em] text-champagne/80 font-sans uppercase">
                     CRAFTED TO HOLD FOREVER

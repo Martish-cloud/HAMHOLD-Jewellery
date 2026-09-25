@@ -3,6 +3,7 @@ import { PRODUCTS } from '../data/products';
 import ProductCard from './ProductCard';
 import { useShop } from '../context/ShopContext';
 import { ArrowRight, Sparkles } from 'lucide-react';
+import { BlurWipeText } from './TextAnimations';
 
 export default function ForHerSection() {
   const { navigateToCatalogue } = useShop();
@@ -20,7 +21,7 @@ export default function ForHerSection() {
               <span>Radiant Femininity</span>
             </div>
             <h2 className="font-serif-luxury text-3xl sm:text-4xl md:text-5xl text-ivory tracking-[0.03em] font-normal">
-              FOR HER
+              <BlurWipeText text="FOR HER" />
             </h2>
             <p className="text-ivory-muted text-xs sm:text-sm font-sans font-light mt-2 max-w-lg">
               Solitaire rings, South Sea pearl cascades, diamond tennis bracelets, and bespoke Colombian emerald pendants sculpted to elevate every celebration.

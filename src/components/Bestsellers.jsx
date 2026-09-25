@@ -3,6 +3,7 @@ import { PRODUCTS } from '../data/products';
 import ProductCard from './ProductCard';
 import { useShop } from '../context/ShopContext';
 import { ArrowRight, Flame } from 'lucide-react';
+import { NeonTypewriterText } from './TextAnimations';
 
 export default function Bestsellers() {
   const { navigateToCatalogue } = useShop();
@@ -21,7 +22,7 @@ export default function Bestsellers() {
               <span>Iconic Signatures</span>
             </div>
             <h2 className="font-serif-luxury text-3xl sm:text-4xl md:text-5xl text-ivory tracking-[0.03em] font-normal">
-              MOST WANTED
+              <NeonTypewriterText text="MOST WANTED" />
             </h2>
           </div>
           <button

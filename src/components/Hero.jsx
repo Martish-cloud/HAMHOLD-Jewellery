@@ -1,6 +1,7 @@
 import React from 'react';
 import { ArrowRight, Sparkles, Shield, Award } from 'lucide-react';
 import { useShop } from '../context/ShopContext';
+import { GhostInterleapText } from './TextAnimations';
 
 export default function Hero() {
   const { navigateToCatalogue, setIsAboutOpen } = useShop();
@@ -28,9 +29,11 @@ export default function Hero() {
 
           {/* Main Editorial Headline */}
           <h1 className="font-serif-luxury text-4xl sm:text-6xl md:text-7xl lg:text-[5rem] tracking-[0.04em] font-normal leading-[1.08] text-ivory mb-6">
-            JEWELLERY <br />
-            THAT HOLDS <br />
-            <span className="italic font-light text-gold-gradient">A MOMENT.</span>
+            <GhostInterleapText>
+              JEWELLERY <br />
+              THAT HOLDS <br />
+              <span className="italic font-light text-gold-gradient">*A MOMENT.</span>
+            </GhostInterleapText>
           </h1>
 
           {/* Subtext */}

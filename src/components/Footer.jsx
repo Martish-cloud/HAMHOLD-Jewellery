@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import { useShop } from '../context/ShopContext';
-import { ArrowRight, Check, Sparkles } from 'lucide-react';
+import { ArrowRight, Check } from 'lucide-react';
+import { BlurWipeText } from './TextAnimations';
 
 export default function Footer() {
   const { navigateToCatalogue, setIsAboutOpen, setIsContactOpen } = useShop();
@@ -25,7 +26,7 @@ export default function Footer() {
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-10 pb-16 border-b border-champagne/15 items-center">
           <div className="lg:col-span-6">
             <span className="font-serif-luxury text-3xl sm:text-4xl tracking-[0.2em] font-normal text-ivory block">
-              HAMHOLD
+              <BlurWipeText text="HAMHOLD" />
             </span>
             <span className="text-[10px] tracking-[0.35em] text-champagne uppercase font-sans mt-1 block">
               CRAFTED TO HOLD FOREVER.

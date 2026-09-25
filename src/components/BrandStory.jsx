@@ -1,5 +1,6 @@
 import React from 'react';
 import { Heart, Sparkles, Clock, Compass } from 'lucide-react';
+import { GhostInterleapText } from './TextAnimations';
 
 export default function BrandStory() {
   const pillars = [
@@ -35,8 +36,10 @@ export default function BrandStory() {
               Brand Philosophy
             </span>
             <h2 className="font-serif-luxury text-3xl sm:text-5xl md:text-6xl text-ivory tracking-[0.03em] font-normal leading-[1.12] mb-6">
-              WHY <br />
-              <span className="text-gold-gradient">HAMHOLD?</span>
+              <GhostInterleapText>
+                WHY <br />
+                <span className="text-gold-gradient">HAMHOLD?</span>
+              </GhostInterleapText>
             </h2>
             <p className="text-ivory-soft text-sm sm:text-base font-sans font-light leading-relaxed mb-6">
               Founded on the belief that fine jewellery is the ultimate vessel of human memory. In a fast-moving world, certain moments demand a physical anchor — something precious, beautiful, and enduring.
