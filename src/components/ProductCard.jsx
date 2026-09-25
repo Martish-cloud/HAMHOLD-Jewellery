@@ -57,36 +57,39 @@ export default function ProductCard({ product, priority = false }) {
         />
       </button>
 
-      {/* Transparent Jewellery Image Container */}
-      <div className="relative w-full aspect-square p-6 flex items-center justify-center overflow-hidden bg-gradient-radial from-espresso/40 via-obsidian-card/80 to-obsidian">
+      {/* Product Image Viewport Container */}
+      <div className="relative w-full aspect-square flex items-center justify-center overflow-hidden bg-gradient-radial from-espresso/30 via-obsidian-card to-obsidian">
         {/* Soft atmospheric ambient glow */}
-        <div className="absolute inset-0 bg-radial-gradient from-champagne/5 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-700 pointer-events-none" />
+        <div className="absolute inset-0 bg-radial-gradient from-champagne/5 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-700 pointer-events-none z-10" />
 
-        {/* Floating Pedestal Shadow */}
-        <div className="absolute bottom-6 w-3/4 h-5 rounded-full bg-black/50 blur-md pointer-events-none transform transition-transform duration-700 group-hover:scale-90 group-hover:opacity-40" />
-
-        {/* Primary Isolated Jewellery (Transparent Background) */}
+        {/* Primary Jewellery Image */}
         <img
           src={product.thumbImage || product.primaryImage}
           alt={product.name}
           loading={priority ? 'eager' : 'lazy'}
           decoding="async"
+          width="400"
+          height="400"
           onError={(e) => {
             if (product.fallbackImage && e.currentTarget.src !== product.fallbackImage) {
               e.currentTarget.src = product.fallbackImage;
             }
           }}
-          className="product-card-image relative z-[1] w-full h-full object-contain filter drop-shadow-[0_12px_24px_rgba(0,0,0,0.65)]"
+          className={`product-card-image w-full h-full transition-transform duration-700 ease-out group-hover:scale-105 ${
+            product.primaryImage?.endsWith('.svg')
+              ? 'object-contain p-6 relative z-[1] filter drop-shadow-[0_12px_24px_rgba(0,0,0,0.65)]'
+              : 'object-cover object-center'
+          }`}
         />
 
         {/* Quick View Button (Desktop overlay) */}
-        <div className="absolute inset-x-4 bottom-4 z-10 hidden md:flex opacity-0 translate-y-3 group-hover:opacity-100 group-hover:translate-y-0 transition-all duration-300">
+        <div className="absolute inset-x-4 bottom-4 z-20 hidden md:flex opacity-0 translate-y-3 group-hover:opacity-100 group-hover:translate-y-0 transition-all duration-300">
           <button
             onClick={(e) => {
               e.stopPropagation();
               setSelectedProduct(product);
             }}
-            className="w-full py-2.5 px-4 rounded-lg bg-obsidian-surface/90 hover:bg-champagne hover:text-obsidian border border-champagne/30 text-ivory text-[11px] uppercase tracking-widest font-semibold backdrop-blur-md flex items-center justify-center gap-2 transition-all duration-300"
+            className="w-full py-2.5 px-4 rounded-lg bg-obsidian-surface/90 hover:bg-champagne hover:text-obsidian border border-champagne/30 text-ivory text-[11px] uppercase tracking-widest font-semibold backdrop-blur-md flex items-center justify-center gap-2 transition-all duration-300 shadow-luxury"
           >
             <Eye className="w-3.5 h-3.5" />
             Quick View
