@@ -51,7 +51,7 @@ export default function ProductListingPage() {
 
     // Gender
     if (gender !== 'all') {
-      result = result.filter((p) => p.gender === gender || p.gender === 'unisex');
+      result = result.filter((p) => p.gender === gender);
     }
 
     // Collection

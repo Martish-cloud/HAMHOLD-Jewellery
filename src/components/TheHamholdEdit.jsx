@@ -12,9 +12,10 @@ export default function TheHamholdEdit() {
       title: '01 — THE SIGNATURE EDIT',
       subtitle: 'Sculpted in 18K solid gold, Polki diamonds & royal emeralds',
       tag: 'Grand Atelier',
-      src: '/images/brand/ambassador/ambassador-5.webp',
+      src: '/images/editorial/the-hamhold-edit/hamhold-edit-01.webp',
+      srcMobile: '/images/editorial/the-hamhold-edit/hamhold-edit-01-mobile.webp',
       aspect: 'aspect-[16/11]',
-      focal: 'object-[center_30%]',
+      focal: 'object-[center_35%]',
       alt: 'HAMHOLD Fine Jewellery Editorial Campaign'
     },
     {
@@ -22,9 +23,10 @@ export default function TheHamholdEdit() {
       title: '02 — ATELIER PORTRAIT',
       subtitle: 'Intricate bridal craftsmanship and certified solitaires',
       tag: 'Couture Joaillerie',
-      src: '/images/brand/ambassador/ambassador-portrait.webp',
+      src: '/images/editorial/the-hamhold-edit/hamhold-edit-02.webp',
+      srcMobile: '/images/editorial/the-hamhold-edit/hamhold-edit-02-mobile.webp',
       aspect: 'aspect-[4/3] lg:aspect-[16/10]',
-      focal: 'object-[center_20%]',
+      focal: 'object-[52%_22%]',
       alt: 'HAMHOLD Ambassador Portrait'
     },
     {
@@ -32,9 +34,10 @@ export default function TheHamholdEdit() {
       title: '03 — TIMELESS ADORNMENT',
       subtitle: 'Heirloom silhouettes designed to transcend generations',
       tag: 'Heritage Collection',
-      src: '/images/brand/ambassador/ambassador-2.webp',
+      src: '/images/editorial/the-hamhold-edit/hamhold-edit-03.webp',
+      srcMobile: '/images/editorial/the-hamhold-edit/hamhold-edit-03-mobile.webp',
       aspect: 'aspect-[16/10]',
-      focal: 'object-[center_35%]',
+      focal: 'object-[50%_28%]',
       alt: 'HAMHOLD Heritage Jewellery Editorial'
     }
   ];
@@ -87,13 +90,18 @@ export default function TheHamholdEdit() {
               data-cursor="view"
               className="group relative flex-1 min-h-[380px] sm:min-h-[460px] lg:min-h-[580px] rounded-2xl overflow-hidden bg-obsidian-card border border-champagne/20 hover:border-champagne/50 transition-all duration-700 cursor-pointer shadow-luxury hover:shadow-luxury-hover"
             >
-              <img
-                src={lookbookImages[0].src}
-                alt={lookbookImages[0].alt}
-                loading="lazy"
-                decoding="async"
-                className={`w-full h-full object-cover ${lookbookImages[0].focal} transition-transform duration-1000 ease-out group-hover:scale-[1.03]`}
-              />
+              <picture className="w-full h-full block">
+                <source media="(max-width: 640px)" srcSet={lookbookImages[0].srcMobile} type="image/webp" />
+                <img
+                  src={lookbookImages[0].src}
+                  alt={lookbookImages[0].alt}
+                  loading="lazy"
+                  decoding="async"
+                  width="1672"
+                  height="941"
+                  className={`w-full h-full object-cover ${lookbookImages[0].focal} transition-transform duration-1000 ease-out group-hover:scale-[1.03]`}
+                />
+              </picture>
 
               {/* Gradient Vignettes */}
               <div className="absolute inset-0 bg-gradient-to-t from-obsidian via-obsidian/30 to-transparent opacity-85 group-hover:opacity-75 transition-opacity duration-500 pointer-events-none" />
@@ -106,9 +114,12 @@ export default function TheHamholdEdit() {
                 </span>
               </div>
 
-              {/* Quick View Hover Indicator */}
-              <div className="absolute top-5 right-5 z-10 w-9 h-9 rounded-full bg-obsidian/75 border border-champagne/30 flex items-center justify-center text-champagne opacity-0 group-hover:opacity-100 transition-all duration-300 backdrop-blur-md transform translate-y-2 group-hover:translate-y-0">
-                <Eye className="w-4 h-4" />
+              {/* Centered Circular Luxury VIEW Button on Hover */}
+              <div className="absolute inset-0 flex items-center justify-center pointer-events-none z-20">
+                <div className="w-20 h-20 rounded-full border border-champagne/60 bg-obsidian/80 backdrop-blur-md flex flex-col items-center justify-center text-champagne opacity-0 group-hover:opacity-100 group-hover:scale-105 transition-all duration-500 shadow-luxury">
+                  <Eye className="w-5 h-5 mb-0.5 text-champagne" />
+                  <span className="text-[10px] tracking-[0.25em] font-medium uppercase text-ivory">VIEW</span>
+                </div>
               </div>
 
               {/* Bottom Editorial Caption */}
@@ -129,15 +140,20 @@ export default function TheHamholdEdit() {
             <div
               onClick={() => setActiveLightboxIndex(1)}
               data-cursor="view"
-              className="group relative h-[280px] sm:h-[320px] lg:h-[280px] rounded-2xl overflow-hidden bg-obsidian-card border border-champagne/20 hover:border-champagne/50 transition-all duration-700 cursor-pointer shadow-luxury hover:shadow-luxury-hover"
+              className="group relative h-[300px] sm:h-[340px] lg:h-[280px] rounded-2xl overflow-hidden bg-obsidian-card border border-champagne/20 hover:border-champagne/50 transition-all duration-700 cursor-pointer shadow-luxury hover:shadow-luxury-hover"
             >
-              <img
-                src={lookbookImages[1].src}
-                alt={lookbookImages[1].alt}
-                loading="lazy"
-                decoding="async"
-                className={`w-full h-full object-cover ${lookbookImages[1].focal} transition-transform duration-1000 ease-out group-hover:scale-[1.03]`}
-              />
+              <picture className="w-full h-full block">
+                <source media="(max-width: 640px)" srcSet={lookbookImages[1].srcMobile} type="image/webp" />
+                <img
+                  src={lookbookImages[1].src}
+                  alt={lookbookImages[1].alt}
+                  loading="lazy"
+                  decoding="async"
+                  width="1672"
+                  height="941"
+                  className={`w-full h-full object-cover ${lookbookImages[1].focal} transition-transform duration-1000 ease-out group-hover:scale-[1.03]`}
+                />
+              </picture>
 
               {/* Gradient Vignettes */}
               <div className="absolute inset-0 bg-gradient-to-t from-obsidian via-obsidian/25 to-transparent opacity-85 group-hover:opacity-75 transition-opacity duration-500 pointer-events-none" />
@@ -149,9 +165,12 @@ export default function TheHamholdEdit() {
                 </span>
               </div>
 
-              {/* Quick View Hover Indicator */}
-              <div className="absolute top-4 right-4 z-10 w-8 h-8 rounded-full bg-obsidian/75 border border-champagne/30 flex items-center justify-center text-champagne opacity-0 group-hover:opacity-100 transition-all duration-300 backdrop-blur-md">
-                <Eye className="w-3.5 h-3.5" />
+              {/* Centered Circular Luxury VIEW Button on Hover */}
+              <div className="absolute inset-0 flex items-center justify-center pointer-events-none z-20">
+                <div className="w-16 h-16 rounded-full border border-champagne/60 bg-obsidian/80 backdrop-blur-md flex flex-col items-center justify-center text-champagne opacity-0 group-hover:opacity-100 group-hover:scale-105 transition-all duration-500 shadow-luxury">
+                  <Eye className="w-4 h-4 mb-0.5 text-champagne" />
+                  <span className="text-[9px] tracking-[0.25em] font-medium uppercase text-ivory">VIEW</span>
+                </div>
               </div>
 
               {/* Bottom Editorial Caption */}
@@ -169,15 +188,20 @@ export default function TheHamholdEdit() {
             <div
               onClick={() => setActiveLightboxIndex(2)}
               data-cursor="view"
-              className="group relative h-[280px] sm:h-[320px] lg:h-[280px] rounded-2xl overflow-hidden bg-obsidian-card border border-champagne/20 hover:border-champagne/50 transition-all duration-700 cursor-pointer shadow-luxury hover:shadow-luxury-hover"
+              className="group relative h-[300px] sm:h-[340px] lg:h-[280px] rounded-2xl overflow-hidden bg-obsidian-card border border-champagne/20 hover:border-champagne/50 transition-all duration-700 cursor-pointer shadow-luxury hover:shadow-luxury-hover"
             >
-              <img
-                src={lookbookImages[2].src}
-                alt={lookbookImages[2].alt}
-                loading="lazy"
-                decoding="async"
-                className={`w-full h-full object-cover ${lookbookImages[2].focal} transition-transform duration-1000 ease-out group-hover:scale-[1.03]`}
-              />
+              <picture className="w-full h-full block">
+                <source media="(max-width: 640px)" srcSet={lookbookImages[2].srcMobile} type="image/webp" />
+                <img
+                  src={lookbookImages[2].src}
+                  alt={lookbookImages[2].alt}
+                  loading="lazy"
+                  decoding="async"
+                  width="1672"
+                  height="941"
+                  className={`w-full h-full object-cover ${lookbookImages[2].focal} transition-transform duration-1000 ease-out group-hover:scale-[1.03]`}
+                />
+              </picture>
 
               {/* Gradient Vignettes */}
               <div className="absolute inset-0 bg-gradient-to-t from-obsidian via-obsidian/25 to-transparent opacity-85 group-hover:opacity-75 transition-opacity duration-500 pointer-events-none" />
@@ -189,9 +213,12 @@ export default function TheHamholdEdit() {
                 </span>
               </div>
 
-              {/* Quick View Hover Indicator */}
-              <div className="absolute top-4 right-4 z-10 w-8 h-8 rounded-full bg-obsidian/75 border border-champagne/30 flex items-center justify-center text-champagne opacity-0 group-hover:opacity-100 transition-all duration-300 backdrop-blur-md">
-                <Eye className="w-3.5 h-3.5" />
+              {/* Centered Circular Luxury VIEW Button on Hover */}
+              <div className="absolute inset-0 flex items-center justify-center pointer-events-none z-20">
+                <div className="w-16 h-16 rounded-full border border-champagne/60 bg-obsidian/80 backdrop-blur-md flex flex-col items-center justify-center text-champagne opacity-0 group-hover:opacity-100 group-hover:scale-105 transition-all duration-500 shadow-luxury">
+                  <Eye className="w-4 h-4 mb-0.5 text-champagne" />
+                  <span className="text-[9px] tracking-[0.25em] font-medium uppercase text-ivory">VIEW</span>
+                </div>
               </div>
 
               {/* Bottom Editorial Caption */}

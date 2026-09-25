@@ -198,7 +198,7 @@ export const PRODUCTS = [
     price: 38000,
     category: 'rings',
     categoryName: 'Rings',
-    gender: 'unisex',
+    gender: 'women',
     collection: 'ETERNAL',
     metal: '18K Yellow Gold',
     purity: '18K (750)',
@@ -215,7 +215,7 @@ export const PRODUCTS = [
     isNew: true,
     isBestseller: true,
     occasion: 'Everyday Luxury',
-    giftingTags: ['For Her', 'For Him', 'Under ₹50K']
+    giftingTags: ['For Her', 'Under ₹50K', 'Everyday Luxury']
   },
 
   // 2. EARRINGS (6 Items)

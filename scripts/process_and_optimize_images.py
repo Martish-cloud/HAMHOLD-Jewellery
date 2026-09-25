@@ -64,7 +64,7 @@ PRODUCTS_META = [
   {'id': 'seraphina-eternity-band', 'name': 'Seraphina Diamond Eternity Band', 'gender': 'women'},
   {'id': 'lyra-halo-ring', 'name': 'Lyra Champagne Diamond Halo Ring', 'gender': 'women'},
   {'id': 'vesper-sapphire-ring', 'name': 'Vesper Royal Sapphire & Diamond Ring', 'gender': 'women'},
-  {'id': 'solstice-fluted-band', 'name': 'Solstice Fluted 18K Gold Band', 'gender': 'unisex'},
+  {'id': 'solstice-fluted-band', 'name': 'Solstice Fluted 18K Gold Band', 'gender': 'women'},
 
   # Earrings (Women)
   {'id': 'astra-drop-earrings', 'name': 'Astra Celestial Diamond Drop Earrings', 'gender': 'women'},
