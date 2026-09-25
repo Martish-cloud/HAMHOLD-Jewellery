@@ -13,55 +13,70 @@ function checkReducedMotion() {
  * - PRIVATE JEWELLERY OFFERS
  * - CRAFTED WITH INTENTION.
  * - FIND SOMETHING THEY'LL NEVER FORGET
+ *
+ * Re-triggerable: Resets when leaving viewport, replays from Character 1 when entering again.
  */
 export function NeonTypewriterText({ text, className = '' }) {
   const containerRef = useRef(null);
   const chars = Array.from(text);
 
-  const [hasStarted, setHasStarted] = useState(() => checkReducedMotion());
+  const [isInView, setIsInView] = useState(() => checkReducedMotion());
   const [revealedIndex, setRevealedIndex] = useState(() =>
     checkReducedMotion() ? chars.length : 0
   );
   const [isComplete, setIsComplete] = useState(() => checkReducedMotion());
 
   useEffect(() => {
-    if (typeof window === 'undefined') return;
-    if (checkReducedMotion()) return;
+    if (typeof window === 'undefined' || checkReducedMotion()) return;
 
     const observer = new IntersectionObserver(
       (entries) => {
         entries.forEach((entry) => {
           if (entry.isIntersecting) {
-            setHasStarted(true);
-            observer.disconnect();
+            setIsInView(true);
+            setRevealedIndex(0);
+            setIsComplete(false);
+          } else {
+            setIsInView(false);
+            setRevealedIndex(0);
+            setIsComplete(false);
           }
         });
       },
-      { threshold: 0.15 }
+      { threshold: 0.1 }
     );
 
-    if (containerRef.current) {
-      observer.observe(containerRef.current);
+    const currentEl = containerRef.current;
+    if (currentEl) {
+      observer.observe(currentEl);
     }
 
-    return () => observer.disconnect();
-  }, []);
+    return () => {
+      if (currentEl) observer.unobserve(currentEl);
+      observer.disconnect();
+    };
+  }, [chars.length]);
 
   useEffect(() => {
-    if (!hasStarted || isComplete) return;
+    if (!isInView || isComplete) return;
 
     if (revealedIndex >= chars.length) {
-      setIsComplete(true);
       return;
     }
 
     // Typing cadence: 38ms per character for an elegant, fluid luxury feel
     const timer = setTimeout(() => {
-      setRevealedIndex((prev) => prev + 1);
+      setRevealedIndex((prev) => {
+        const next = prev + 1;
+        if (next >= chars.length) {
+          setIsComplete(true);
+        }
+        return next;
+      });
     }, 38);
 
     return () => clearTimeout(timer);
-  }, [hasStarted, revealedIndex, chars.length, isComplete]);
+  }, [isInView, revealedIndex, chars.length, isComplete]);
 
   return (
     <span
@@ -113,50 +128,61 @@ export function NeonTypewriterText({ text, className = '' }) {
  * - FOR HIM
  * - HAMHOLD
  * - THE HAMHOLD EDIT
+ *
+ * Re-triggerable: Resets when leaving viewport, replays blur wipe from 0% when entering again.
  */
 export function BlurWipeText({ text, children, className = '' }) {
   const content = text || children;
   const containerRef = useRef(null);
 
-  const [hasTriggered, setHasTriggered] = useState(() => checkReducedMotion());
-  const [isFinished, setIsFinished] = useState(() => checkReducedMotion());
+  const [animKey, setAnimKey] = useState(0);
+  const [animState, setAnimState] = useState(() =>
+    checkReducedMotion() ? 'finished' : 'idle'
+  );
 
   useEffect(() => {
-    if (typeof window === 'undefined') return;
-    if (checkReducedMotion()) return;
+    if (typeof window === 'undefined' || checkReducedMotion()) return;
 
     const observer = new IntersectionObserver(
       (entries) => {
         entries.forEach((entry) => {
           if (entry.isIntersecting) {
-            setHasTriggered(true);
-            observer.disconnect();
+            setAnimKey((prev) => prev + 1);
+            setAnimState('animating');
+          } else {
+            setAnimState('idle');
           }
         });
       },
-      { threshold: 0.15 }
+      { threshold: 0.1 }
     );
 
-    if (containerRef.current) {
-      observer.observe(containerRef.current);
+    const currentEl = containerRef.current;
+    if (currentEl) {
+      observer.observe(currentEl);
     }
 
-    return () => observer.disconnect();
+    return () => {
+      if (currentEl) observer.unobserve(currentEl);
+      observer.disconnect();
+    };
   }, []);
 
   return (
-    <span
-      ref={containerRef}
-      onAnimationEnd={() => setIsFinished(true)}
-      className={`inline-block relative ${
-        isFinished
-          ? ''
-          : hasTriggered
-          ? 'animate-blur-wipe'
-          : 'opacity-0'
-      } ${className}`}
-    >
-      {content}
+    <span ref={containerRef} className={`inline-block relative ${className}`}>
+      <span
+        key={animKey}
+        onAnimationEnd={() => setAnimState('finished')}
+        className={
+          animState === 'finished'
+            ? 'inline-block'
+            : animState === 'animating'
+            ? 'animate-blur-wipe inline-block'
+            : 'opacity-0 inline-block'
+        }
+      >
+        {content}
+      </span>
     </span>
   );
 }
@@ -169,42 +195,52 @@ export function BlurWipeText({ text, children, className = '' }) {
  * - DISCOVER YOUR SIGNATURE
  * - WHY HAMHOLD?
  * - JEWELLERY THAT HOLDS *A MOMENT.
+ *
+ * Re-triggerable: Resets when leaving viewport, replays convergence from 0% when entering again.
  */
 export function GhostInterleapText({ text, children, className = '' }) {
   const content = text || children;
   const containerRef = useRef(null);
 
-  const [hasTriggered, setHasTriggered] = useState(() => checkReducedMotion());
-  const [isFinished, setIsFinished] = useState(() => checkReducedMotion());
+  const [animKey, setAnimKey] = useState(0);
+  const [animState, setAnimState] = useState(() =>
+    checkReducedMotion() ? 'finished' : 'idle'
+  );
 
   useEffect(() => {
-    if (typeof window === 'undefined') return;
-    if (checkReducedMotion()) return;
+    if (typeof window === 'undefined' || checkReducedMotion()) return;
 
     const observer = new IntersectionObserver(
       (entries) => {
         entries.forEach((entry) => {
           if (entry.isIntersecting) {
-            setHasTriggered(true);
-            observer.disconnect();
+            setAnimKey((prev) => prev + 1);
+            setAnimState('animating');
+          } else {
+            setAnimState('idle');
           }
         });
       },
-      { threshold: 0.15 }
+      { threshold: 0.1 }
     );
 
-    if (containerRef.current) {
-      observer.observe(containerRef.current);
+    const currentEl = containerRef.current;
+    if (currentEl) {
+      observer.observe(currentEl);
     }
 
-    return () => observer.disconnect();
+    return () => {
+      if (currentEl) observer.unobserve(currentEl);
+      observer.disconnect();
+    };
   }, []);
 
   return (
     <span ref={containerRef} className={`relative inline-block ${className}`}>
       {/* Ghost Layer 1: subtle leading ghost converging from left/top */}
-      {hasTriggered && !isFinished && (
+      {animState === 'animating' && (
         <span
+          key={`ghost-1-${animKey}`}
           aria-hidden="true"
           className="absolute inset-0 pointer-events-none select-none animate-ghost-converge-1"
         >
@@ -213,8 +249,9 @@ export function GhostInterleapText({ text, children, className = '' }) {
       )}
 
       {/* Ghost Layer 2: subtle counter ghost converging from right/bottom */}
-      {hasTriggered && !isFinished && (
+      {animState === 'animating' && (
         <span
+          key={`ghost-2-${animKey}`}
           aria-hidden="true"
           className="absolute inset-0 pointer-events-none select-none animate-ghost-converge-2"
         >
@@ -224,11 +261,12 @@ export function GhostInterleapText({ text, children, className = '' }) {
 
       {/* Main Text: converges cleanly into position */}
       <span
-        onAnimationEnd={() => setIsFinished(true)}
+        key={`main-${animKey}`}
+        onAnimationEnd={() => setAnimState('finished')}
         className={
-          isFinished
-            ? ''
-            : hasTriggered
+          animState === 'finished'
+            ? 'inline-block'
+            : animState === 'animating'
             ? 'animate-ghost-main inline-block'
             : 'opacity-0 inline-block'
         }
