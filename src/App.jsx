@@ -7,6 +7,7 @@ import MobileNav from './components/MobileNav';
 import Hero from './components/Hero';
 import ShopByCategory from './components/ShopByCategory';
 import CollectionsSection from './components/CollectionsSection';
+import TheHamholdEdit from './components/TheHamholdEdit';
 import NewArrivals from './components/NewArrivals';
 import ForHimSection from './components/ForHimSection';
 import ForHerSection from './components/ForHerSection';
@@ -60,7 +61,10 @@ export default function App() {
             {/* 5. The HAMHOLD Collections */}
             <CollectionsSection />
 
-            {/* 6. New Arrivals */}
+            {/* 6. Editorial Lookbook Experience: The HAMHOLD Edit */}
+            <TheHamholdEdit />
+
+            {/* 7. New Arrivals */}
             <NewArrivals />
 
             {/* 7. Most Wanted (Bestsellers) */}
