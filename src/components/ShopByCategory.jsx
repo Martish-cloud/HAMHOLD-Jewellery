@@ -38,31 +38,46 @@ export default function ShopByCategory() {
               key={cat.id}
               onClick={() => navigateToCatalogue({ category: cat.id })}
               data-cursor="explore"
-              className="flex-shrink-0 w-44 sm:w-52 md:w-auto group relative flex flex-col items-center justify-between p-6 rounded-xl bg-obsidian-card/60 hover:bg-obsidian-light/80 border border-champagne/15 hover:border-champagne/40 transition-all duration-500 cursor-pointer shadow-luxury hover:shadow-luxury-hover"
+              className="flex-shrink-0 w-44 sm:w-52 md:w-auto group relative flex flex-col items-center justify-between p-4 sm:p-5 rounded-2xl bg-obsidian-card/70 hover:bg-obsidian-card border border-champagne/15 hover:border-champagne/45 transition-all duration-500 cursor-pointer shadow-luxury hover:shadow-luxury-hover overflow-hidden"
             >
               {/* Subtle halo glow */}
-              <div className="absolute inset-0 bg-radial-gradient from-champagne/10 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500 rounded-xl" />
+              <div className="absolute inset-0 bg-radial-gradient from-champagne/10 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500 rounded-2xl pointer-events-none" />
 
-              {/* Floating Transparent Jewellery Silhouette */}
-              <div className="relative w-28 h-28 sm:w-32 sm:h-32 mb-4 flex items-center justify-center">
-                {/* Soft ground blur */}
-                <div className="absolute bottom-2 w-20 h-4 rounded-full bg-black/40 blur-sm group-hover:scale-110 transition-transform duration-500" />
-                <img
-                  src={cat.image}
-                  alt={cat.name}
-                  loading="lazy"
-                  decoding="async"
-                  className="w-full h-full object-contain filter drop-shadow-[0_8px_16px_rgba(0,0,0,0.6)] transform group-hover:scale-110 group-hover:-translate-y-1 transition-all duration-500"
-                />
+              {/* Category Image Area with Integrated Circular Decorative Rings & Ambient Glow */}
+              <div className="relative w-full aspect-square max-w-[140px] sm:max-w-[160px] mb-3.5 flex items-center justify-center">
+                {/* Decorative Circular Outer Ring */}
+                <div className="absolute inset-0 rounded-full border border-champagne/25 group-hover:border-champagne/50 transition-colors duration-500 pointer-events-none" />
+
+                {/* Concentric Subtle Orbital Accent Ring */}
+                <div className="absolute -inset-1 rounded-full border border-champagne/15 border-dashed group-hover:border-champagne/30 transition-all duration-700 pointer-events-none" />
+
+                {/* Soft Radial Ambient Glow */}
+                <div className="absolute inset-2 rounded-full bg-espresso/60 group-hover:bg-champagne/10 blur-md transition-colors duration-500 pointer-events-none" />
+
+                {/* Medallion Image Viewport Filling the Inner Region */}
+                <div className="relative w-[calc(100%-10px)] h-[calc(100%-10px)] rounded-full overflow-hidden border border-champagne/35 bg-obsidian shadow-2xl">
+                  <img
+                    src={cat.image}
+                    alt={cat.name}
+                    loading="lazy"
+                    decoding="async"
+                    width="240"
+                    height="240"
+                    className="w-full h-full object-cover object-center transform transition-transform duration-700 ease-out group-hover:scale-105"
+                  />
+                  {/* Subtle vignette for luxury depth */}
+                  <div className="absolute inset-0 bg-gradient-to-t from-obsidian/40 via-transparent to-transparent opacity-60 pointer-events-none" />
+                </div>
               </div>
 
               {/* Category Name & Discover action */}
-              <div className="text-center relative z-10 w-full">
-                <h3 className="font-serif-luxury text-base sm:text-lg text-ivory group-hover:text-champagne transition-colors duration-300">
+              <div className="text-center relative z-10 w-full mt-auto">
+                <h3 className="font-serif-luxury text-sm sm:text-base text-ivory group-hover:text-champagne transition-colors duration-300 line-clamp-1">
                   {cat.name}
                 </h3>
-                <span className="text-[10px] text-ivory-muted/70 uppercase tracking-widest font-sans mt-1 block group-hover:text-champagne/90 transition-colors">
-                  Explore →
+                <span className="text-[10px] text-champagne/80 group-hover:text-champagne uppercase tracking-[0.2em] font-sans mt-1.5 flex items-center justify-center gap-1 transition-colors">
+                  <span>Explore</span>
+                  <span className="transform transition-transform duration-300 group-hover:translate-x-1">→</span>
                 </span>
               </div>
             </div>

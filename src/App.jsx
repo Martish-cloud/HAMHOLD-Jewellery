@@ -11,6 +11,7 @@ import TheHamholdEdit from './components/TheHamholdEdit';
 import NewArrivals from './components/NewArrivals';
 import ForHimSection from './components/ForHimSection';
 import ForHerSection from './components/ForHerSection';
+import PrivateOffers from './components/PrivateOffers';
 import GiftFinder from './components/GiftFinder';
 import EditorialCampaign from './components/EditorialCampaign';
 import Bestsellers from './components/Bestsellers';
@@ -76,7 +77,10 @@ export default function App() {
             {/* 9. For Him + Men's Brand Ambassador (Ayush) */}
             <ForHimSection />
 
-            {/* 10. Master Craftsmanship */}
+            {/* 10. Private Jewellery Offers: Women's & Men's Curated Edits */}
+            <PrivateOffers />
+
+            {/* 11. Master Craftsmanship */}
             <Craftsmanship />
 
             {/* 11. Interactive Gift & Milestone Finder */}
