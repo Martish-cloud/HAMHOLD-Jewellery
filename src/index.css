@@ -74,12 +74,15 @@
   -webkit-text-fill-color: transparent;
 }
 
-/* Smooth Image Hover Zooms */
+/* Smooth Image Hover Zooms & High-Fidelity Rendering */
 .product-card-image {
   transition: transform 0.7s cubic-bezier(0.16, 1, 0.3, 1), filter 0.5s ease;
+  image-rendering: -webkit-optimize-contrast;
+  backface-visibility: hidden;
+  transform: translateZ(0);
 }
 .product-card:hover .product-card-image {
-  transform: scale(1.08) translateY(-4px);
+  transform: scale(1.08) translateY(-4px) translateZ(0);
 }
 
 /* Keyframe animations */

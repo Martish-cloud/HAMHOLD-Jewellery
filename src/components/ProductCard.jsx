@@ -64,12 +64,18 @@ export default function ProductCard({ product, priority = false }) {
 
         {/* Primary Jewellery Image */}
         <img
-          src={product.thumbImage || product.primaryImage}
+          src={product.primaryImage || product.thumbImage}
+          srcSet={
+            product.thumbImage && product.primaryImage && product.thumbImage !== product.primaryImage
+              ? `${product.thumbImage} 720w, ${product.primaryImage} 1200w`
+              : undefined
+          }
+          sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, (max-width: 1280px) 33vw, 380px"
           alt={product.name}
           loading={priority ? 'eager' : 'lazy'}
           decoding="async"
-          width="400"
-          height="400"
+          width="600"
+          height="600"
           onError={(e) => {
             if (product.fallbackImage && e.currentTarget.src !== product.fallbackImage) {
               e.currentTarget.src = product.fallbackImage;
