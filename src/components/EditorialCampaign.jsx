@@ -6,7 +6,7 @@ export default function EditorialCampaign() {
   const { navigateToCatalogue } = useShop();
 
   return (
-    <section className="relative min-h-[520px] sm:min-h-[600px] md:min-h-[680px] lg:min-h-[760px] flex items-center bg-obsidian overflow-hidden border-t border-champagne/15">
+    <section className="relative min-h-[580px] sm:min-h-[660px] md:min-h-[740px] lg:min-h-[820px] xl:min-h-[880px] flex items-center bg-obsidian overflow-hidden">
       {/* Background Cinematic Atmosphere featuring HAMHOLD Brand Ambassador */}
       <div className="absolute inset-0 z-0">
         <picture>
@@ -15,7 +15,8 @@ export default function EditorialCampaign() {
             src="/images/brand/ambassador/ambassador-hero.webp"
             alt="HAMHOLD Brand Ambassador"
             className="w-full h-full object-cover object-[center_35%] md:object-[50%_35%] filter brightness-100 contrast-105"
-            loading="lazy"
+            loading="eager"
+            fetchpriority="high"
             decoding="async"
           />
         </picture>

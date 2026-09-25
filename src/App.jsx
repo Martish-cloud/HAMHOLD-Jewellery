@@ -45,38 +45,38 @@ export default function App() {
           <ProductListingPage />
         ) : (
           <>
-            {/* 1. Immersive Hero */}
-            <Hero />
-
-            {/* 2. Shop By Category */}
-            <ShopByCategory />
-
-            {/* 3. The HAMHOLD Collections */}
-            <CollectionsSection />
-
-            {/* 4. New Arrivals */}
-            <NewArrivals />
-
-            {/* 5. For Him (Men's Jewellery) */}
-            <ForHimSection />
-
-            {/* 6. For Her (Women's Jewellery) */}
-            <ForHerSection />
-
-            {/* 7. Interactive Gift Finder */}
-            <GiftFinder />
-
-            {/* 8. Editorial Campaign (The Art of Becoming) */}
+            {/* 1. Primary Hero: Women's Brand Ambassador Campaign */}
             <EditorialCampaign />
 
-            {/* 9. Most Wanted (Bestsellers) */}
+            {/* 2. Second Hero: Jewellery That Holds A Moment (Brand Philosophy & Masterpiece) */}
+            <Hero />
+
+            {/* 3. Signature Brand Story & Atelier Introduction */}
+            <BrandStory />
+
+            {/* 4. Fine Jewellery Categories */}
+            <ShopByCategory />
+
+            {/* 5. The HAMHOLD Collections */}
+            <CollectionsSection />
+
+            {/* 6. New Arrivals */}
+            <NewArrivals />
+
+            {/* 7. Most Wanted (Bestsellers) */}
             <Bestsellers />
 
-            {/* 10. Craftsmanship (Crafted with Intention) */}
+            {/* 8. For Her (Women's Fine Jewellery) */}
+            <ForHerSection />
+
+            {/* 9. For Him + Men's Brand Ambassador (Ayush) */}
+            <ForHimSection />
+
+            {/* 10. Master Craftsmanship */}
             <Craftsmanship />
 
-            {/* 11. Brand Story (Why HAMHOLD?) */}
-            <BrandStory />
+            {/* 11. Interactive Gift & Milestone Finder */}
+            <GiftFinder />
 
             {/* 12. Trust & Service Pillars */}
             <TrustSection />
