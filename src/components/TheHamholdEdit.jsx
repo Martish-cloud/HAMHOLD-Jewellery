@@ -10,7 +10,19 @@ export default function TheHamholdEdit() {
   const lookbookImages = [
     {
       id: '01',
-      title: '01 — TIMELESS ADORNMENT',
+      title: '01 — THE SIGNATURE EDIT',
+      subtitle: 'Sculpted in 18K solid gold, Polki diamonds & royal emeralds',
+      tag: 'Grand Atelier',
+      src: '/Image 1.png',
+      srcWebp: '/images/editorial/the-hamhold-edit/image-1.webp',
+      srcMobile: '/images/editorial/the-hamhold-edit/image-1-mobile.webp',
+      aspect: 'aspect-[16/11]',
+      focal: 'object-[center_28%]',
+      alt: 'HAMHOLD Emerald Couture Fine Jewellery Editorial'
+    },
+    {
+      id: '02',
+      title: '02 — TIMELESS ADORNMENT',
       subtitle: 'Heirloom silhouettes designed to transcend generations',
       tag: 'Heritage Collection',
       src: '/images/editorial/the-hamhold-edit/hamhold-edit-03.webp',
@@ -18,28 +30,6 @@ export default function TheHamholdEdit() {
       aspect: 'aspect-[16/11]',
       focal: 'object-[50%_28%]',
       alt: 'HAMHOLD Heritage Jewellery Editorial'
-    },
-    {
-      id: '02',
-      title: '02 — ATELIER PORTRAIT',
-      subtitle: 'Intricate bridal craftsmanship and certified solitaires',
-      tag: 'Couture Joaillerie',
-      src: '/images/editorial/the-hamhold-edit/hamhold-edit-02.webp',
-      srcMobile: '/images/editorial/the-hamhold-edit/hamhold-edit-02-mobile.webp',
-      aspect: 'aspect-[4/3] lg:aspect-[16/10]',
-      focal: 'object-[52%_22%]',
-      alt: 'HAMHOLD Ambassador Portrait'
-    },
-    {
-      id: '03',
-      title: '03 — THE SIGNATURE EDIT',
-      subtitle: 'Sculpted in 18K solid gold, Polki diamonds & royal emeralds',
-      tag: 'Grand Atelier',
-      src: '/images/editorial/the-hamhold-edit/hamhold-edit-01.webp',
-      srcMobile: '/images/editorial/the-hamhold-edit/hamhold-edit-01-mobile.webp',
-      aspect: 'aspect-[16/10]',
-      focal: 'object-[center_35%]',
-      alt: 'HAMHOLD Fine Jewellery Editorial Campaign'
     }
   ];
 
@@ -59,7 +49,7 @@ export default function TheHamholdEdit() {
 
     window.addEventListener('keydown', handleKeyDown);
     return () => window.removeEventListener('keydown', handleKeyDown);
-  }, [activeLightboxIndex]);
+  }, [activeLightboxIndex, lookbookImages.length]);
 
   return (
     <section className="py-24 md:py-36 bg-obsidian border-t border-champagne/15 relative overflow-hidden">
@@ -82,157 +72,62 @@ export default function TheHamholdEdit() {
           </p>
         </div>
 
-        {/* Asymmetrical Editorial Grid */}
-        <div className="grid grid-cols-1 lg:grid-cols-12 gap-6 lg:gap-8 items-stretch">
-          {/* Left Column (7 Cols): Primary Large Editorial Frame */}
-          <div className="lg:col-span-7 flex flex-col">
-            <div
-              onClick={() => setActiveLightboxIndex(0)}
-              data-cursor="view"
-              className="group relative flex-1 min-h-[380px] sm:min-h-[460px] lg:min-h-[580px] rounded-2xl overflow-hidden bg-obsidian-card border border-champagne/20 hover:border-champagne/50 transition-all duration-700 cursor-pointer shadow-luxury hover:shadow-luxury-hover"
-            >
-              <picture className="w-full h-full block">
-                <source media="(max-width: 640px)" srcSet={lookbookImages[0].srcMobile} type="image/webp" />
-                <img
-                  src={lookbookImages[0].src}
-                  alt={lookbookImages[0].alt}
-                  loading="lazy"
-                  decoding="async"
-                  width="1672"
-                  height="941"
-                  className={`w-full h-full object-cover ${lookbookImages[0].focal} transition-transform duration-1000 ease-out group-hover:scale-[1.03]`}
-                />
-              </picture>
+        {/* 2-Column Balanced Editorial Gallery */}
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-6 lg:gap-8 items-stretch">
+          {lookbookImages.map((imgItem, index) => (
+            <div key={imgItem.id} className="flex flex-col">
+              <div
+                onClick={() => setActiveLightboxIndex(index)}
+                data-cursor="view"
+                className="group relative flex-1 min-h-[400px] sm:min-h-[480px] lg:min-h-[580px] rounded-2xl overflow-hidden bg-obsidian-card border border-champagne/20 hover:border-champagne/50 transition-all duration-700 cursor-pointer shadow-luxury hover:shadow-luxury-hover flex flex-col justify-end"
+              >
+                <picture className="absolute inset-0 w-full h-full block">
+                  {imgItem.srcMobile && (
+                    <source media="(max-width: 640px)" srcSet={imgItem.srcMobile} type="image/webp" />
+                  )}
+                  {imgItem.srcWebp && (
+                    <source srcSet={imgItem.srcWebp} type="image/webp" />
+                  )}
+                  <img
+                    src={imgItem.src}
+                    alt={imgItem.alt}
+                    loading="lazy"
+                    decoding="async"
+                    className={`w-full h-full object-cover ${imgItem.focal} transition-transform duration-1000 ease-out group-hover:scale-[1.03]`}
+                  />
+                </picture>
 
-              {/* Gradient Vignettes */}
-              <div className="absolute inset-0 bg-gradient-to-t from-obsidian via-obsidian/30 to-transparent opacity-85 group-hover:opacity-75 transition-opacity duration-500 pointer-events-none" />
-              <div className="absolute inset-0 bg-gradient-to-r from-obsidian/40 via-transparent to-transparent opacity-60 pointer-events-none" />
+                {/* Gradient Vignettes */}
+                <div className="absolute inset-0 bg-gradient-to-t from-obsidian via-obsidian/30 to-transparent opacity-85 group-hover:opacity-75 transition-opacity duration-500 pointer-events-none" />
+                <div className="absolute inset-0 bg-gradient-to-r from-obsidian/30 via-transparent to-transparent opacity-50 pointer-events-none" />
 
-              {/* Top Tag */}
-              <div className="absolute top-5 left-5 z-10">
-                <span className="px-3 py-1 rounded-full text-[9px] uppercase tracking-[0.25em] font-medium bg-obsidian/80 text-champagne border border-champagne/30 backdrop-blur-md">
-                  {lookbookImages[0].tag}
-                </span>
-              </div>
+                {/* Top Tag */}
+                <div className="absolute top-5 left-5 z-10">
+                  <span className="px-3 py-1 rounded-full text-[9px] uppercase tracking-[0.25em] font-medium bg-obsidian/80 text-champagne border border-champagne/30 backdrop-blur-md">
+                    {imgItem.tag}
+                  </span>
+                </div>
 
-              {/* Centered Circular Luxury VIEW Button on Hover */}
-              <div className="absolute inset-0 flex items-center justify-center pointer-events-none z-20">
-                <div className="w-20 h-20 rounded-full border border-champagne/60 bg-obsidian/80 backdrop-blur-md flex flex-col items-center justify-center text-champagne opacity-0 group-hover:opacity-100 group-hover:scale-105 transition-all duration-500 shadow-luxury">
-                  <Eye className="w-5 h-5 mb-0.5 text-champagne" />
-                  <span className="text-[10px] tracking-[0.25em] font-medium uppercase text-ivory">VIEW</span>
+                {/* Centered Circular Luxury VIEW Button on Hover */}
+                <div className="absolute inset-0 flex items-center justify-center pointer-events-none z-20">
+                  <div className="w-20 h-20 rounded-full border border-champagne/60 bg-obsidian/80 backdrop-blur-md flex flex-col items-center justify-center text-champagne opacity-0 group-hover:opacity-100 group-hover:scale-105 transition-all duration-500 shadow-luxury">
+                    <Eye className="w-5 h-5 mb-0.5 text-champagne" />
+                    <span className="text-[10px] tracking-[0.25em] font-medium uppercase text-ivory">VIEW</span>
+                  </div>
+                </div>
+
+                {/* Bottom Editorial Caption */}
+                <div className="relative z-10 p-6 sm:p-8">
+                  <span className="font-serif-luxury text-lg sm:text-2xl text-ivory block font-normal group-hover:text-champagne transition-colors duration-300">
+                    {imgItem.title}
+                  </span>
+                  <p className="text-xs sm:text-sm text-ivory-soft/80 font-sans font-light mt-1">
+                    {imgItem.subtitle}
+                  </p>
                 </div>
               </div>
-
-              {/* Bottom Editorial Caption */}
-              <div className="absolute bottom-6 left-6 right-6 z-10">
-                <span className="font-serif-luxury text-lg sm:text-2xl text-ivory block font-normal group-hover:text-champagne transition-colors duration-300">
-                  {lookbookImages[0].title}
-                </span>
-                <p className="text-xs sm:text-sm text-ivory-soft/80 font-sans font-light mt-1">
-                  {lookbookImages[0].subtitle}
-                </p>
-              </div>
             </div>
-          </div>
-
-          {/* Right Column (5 Cols): Stacked Complementary Editorial Frames */}
-          <div className="lg:col-span-5 flex flex-col gap-6 lg:gap-8 justify-between">
-            {/* Top Frame: Vertical Portrait */}
-            <div
-              onClick={() => setActiveLightboxIndex(1)}
-              data-cursor="view"
-              className="group relative h-[300px] sm:h-[340px] lg:h-[280px] rounded-2xl overflow-hidden bg-obsidian-card border border-champagne/20 hover:border-champagne/50 transition-all duration-700 cursor-pointer shadow-luxury hover:shadow-luxury-hover"
-            >
-              <picture className="w-full h-full block">
-                <source media="(max-width: 640px)" srcSet={lookbookImages[1].srcMobile} type="image/webp" />
-                <img
-                  src={lookbookImages[1].src}
-                  alt={lookbookImages[1].alt}
-                  loading="lazy"
-                  decoding="async"
-                  width="1672"
-                  height="941"
-                  className={`w-full h-full object-cover ${lookbookImages[1].focal} transition-transform duration-1000 ease-out group-hover:scale-[1.03]`}
-                />
-              </picture>
-
-              {/* Gradient Vignettes */}
-              <div className="absolute inset-0 bg-gradient-to-t from-obsidian via-obsidian/25 to-transparent opacity-85 group-hover:opacity-75 transition-opacity duration-500 pointer-events-none" />
-
-              {/* Top Tag */}
-              <div className="absolute top-4 left-4 z-10">
-                <span className="px-2.5 py-0.5 rounded-full text-[8px] uppercase tracking-[0.22em] font-medium bg-obsidian/80 text-champagne border border-champagne/30 backdrop-blur-md">
-                  {lookbookImages[1].tag}
-                </span>
-              </div>
-
-              {/* Centered Circular Luxury VIEW Button on Hover */}
-              <div className="absolute inset-0 flex items-center justify-center pointer-events-none z-20">
-                <div className="w-16 h-16 rounded-full border border-champagne/60 bg-obsidian/80 backdrop-blur-md flex flex-col items-center justify-center text-champagne opacity-0 group-hover:opacity-100 group-hover:scale-105 transition-all duration-500 shadow-luxury">
-                  <Eye className="w-4 h-4 mb-0.5 text-champagne" />
-                  <span className="text-[9px] tracking-[0.25em] font-medium uppercase text-ivory">VIEW</span>
-                </div>
-              </div>
-
-              {/* Bottom Editorial Caption */}
-              <div className="absolute bottom-5 left-5 right-5 z-10">
-                <span className="font-serif-luxury text-base sm:text-lg text-ivory block font-normal group-hover:text-champagne transition-colors duration-300">
-                  {lookbookImages[1].title}
-                </span>
-                <p className="text-[11px] sm:text-xs text-ivory-soft/80 font-sans font-light mt-0.5 line-clamp-1">
-                  {lookbookImages[1].subtitle}
-                </p>
-              </div>
-            </div>
-
-            {/* Bottom Frame: Complementary Widescreen Editorial Frame */}
-            <div
-              onClick={() => setActiveLightboxIndex(2)}
-              data-cursor="view"
-              className="group relative h-[300px] sm:h-[340px] lg:h-[280px] rounded-2xl overflow-hidden bg-obsidian-card border border-champagne/20 hover:border-champagne/50 transition-all duration-700 cursor-pointer shadow-luxury hover:shadow-luxury-hover"
-            >
-              <picture className="w-full h-full block">
-                <source media="(max-width: 640px)" srcSet={lookbookImages[2].srcMobile} type="image/webp" />
-                <img
-                  src={lookbookImages[2].src}
-                  alt={lookbookImages[2].alt}
-                  loading="lazy"
-                  decoding="async"
-                  width="1672"
-                  height="941"
-                  className={`w-full h-full object-cover ${lookbookImages[2].focal} transition-transform duration-1000 ease-out group-hover:scale-[1.03]`}
-                />
-              </picture>
-
-              {/* Gradient Vignettes */}
-              <div className="absolute inset-0 bg-gradient-to-t from-obsidian via-obsidian/25 to-transparent opacity-85 group-hover:opacity-75 transition-opacity duration-500 pointer-events-none" />
-
-              {/* Top Tag */}
-              <div className="absolute top-4 left-4 z-10">
-                <span className="px-2.5 py-0.5 rounded-full text-[8px] uppercase tracking-[0.22em] font-medium bg-obsidian/80 text-champagne border border-champagne/30 backdrop-blur-md">
-                  {lookbookImages[2].tag}
-                </span>
-              </div>
-
-              {/* Centered Circular Luxury VIEW Button on Hover */}
-              <div className="absolute inset-0 flex items-center justify-center pointer-events-none z-20">
-                <div className="w-16 h-16 rounded-full border border-champagne/60 bg-obsidian/80 backdrop-blur-md flex flex-col items-center justify-center text-champagne opacity-0 group-hover:opacity-100 group-hover:scale-105 transition-all duration-500 shadow-luxury">
-                  <Eye className="w-4 h-4 mb-0.5 text-champagne" />
-                  <span className="text-[9px] tracking-[0.25em] font-medium uppercase text-ivory">VIEW</span>
-                </div>
-              </div>
-
-              {/* Bottom Editorial Caption */}
-              <div className="absolute bottom-5 left-5 right-5 z-10">
-                <span className="font-serif-luxury text-base sm:text-lg text-ivory block font-normal group-hover:text-champagne transition-colors duration-300">
-                  {lookbookImages[2].title}
-                </span>
-                <p className="text-[11px] sm:text-xs text-ivory-soft/80 font-sans font-light mt-0.5 line-clamp-1">
-                  {lookbookImages[2].subtitle}
-                </p>
-              </div>
-            </div>
-          </div>
+          ))}
         </div>
 
         {/* Bottom Editorial Action */}

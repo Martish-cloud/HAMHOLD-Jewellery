@@ -1,5 +1,5 @@
 import React from 'react';
-import { ArrowRight, Sparkles, Gem, ShieldCheck, Clock } from 'lucide-react';
+import { ArrowRight, Sparkles, Gem, ShieldCheck } from 'lucide-react';
 import { useShop } from '../context/ShopContext';
 import { NeonTypewriterText } from './TextAnimations';
 
@@ -36,15 +36,18 @@ export default function PrivateOffers() {
           <div className="group relative rounded-2xl bg-gradient-radial from-espresso/40 via-obsidian-card to-obsidian border border-champagne/20 hover:border-champagne/45 transition-all duration-500 overflow-hidden shadow-luxury hover:shadow-luxury-hover flex flex-col justify-between">
             {/* Top Image Banner with Atmospheric Vignette */}
             <div className="relative w-full h-64 sm:h-72 overflow-hidden">
-              <img
-                src="/images/editorial/the-hamhold-edit/hamhold-edit-02.webp"
-                alt="Women's Fine Jewellery Private Edit"
-                loading="lazy"
-                decoding="async"
-                width="800"
-                height="450"
-                className="w-full h-full object-cover object-[50%_20%] transform transition-transform duration-700 ease-out group-hover:scale-105"
-              />
+              <picture className="w-full h-full block">
+                <source srcSet="/images/editorial/the-hamhold-edit/image-2.webp" type="image/webp" />
+                <img
+                  src="/Image 2.png"
+                  alt="Women's Fine Jewellery Private Edit"
+                  loading="lazy"
+                  decoding="async"
+                  width="800"
+                  height="450"
+                  className="w-full h-full object-cover object-[50%_18%] transform transition-transform duration-700 ease-out group-hover:scale-105"
+                />
+              </picture>
               <div className="absolute inset-0 bg-gradient-to-t from-obsidian via-obsidian/40 to-transparent" />
               <div className="absolute top-4 left-4 z-10">
                 <span className="px-3 py-1 rounded-full text-[9px] uppercase tracking-[0.25em] font-medium bg-obsidian/85 text-champagne border border-champagne/30 backdrop-blur-md">
