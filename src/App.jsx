@@ -22,7 +22,6 @@ import ProductListingPage from './components/ProductListingPage';
 import ProductDetailModal from './components/ProductDetailModal';
 import CartDrawer from './components/CartDrawer';
 import WishlistDrawer from './components/WishlistDrawer';
-import SearchModal from './components/SearchModal';
 import FloatingJewellerySearch from './components/FloatingJewellerySearch';
 import AboutModal from './components/AboutModal';
 import ContactModal from './components/ContactModal';
@@ -106,7 +105,6 @@ export default function App() {
       <ProductDetailModal />
       <CartDrawer />
       <WishlistDrawer />
-      <SearchModal />
       <AboutModal />
       <ContactModal />
     </div>
