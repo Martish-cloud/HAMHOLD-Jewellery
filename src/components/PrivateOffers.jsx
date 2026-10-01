@@ -111,7 +111,7 @@ export default function PrivateOffers() {
                 <button
                   onClick={() => navigateToCatalogue({ gender: 'women' })}
                   data-cursor="explore"
-                  className="inline-flex items-center justify-center gap-3 px-7 py-3.5 rounded-full bg-champagne hover:bg-champagne-light text-obsidian text-xs tracking-[0.2em] uppercase font-semibold transition-all duration-300 shadow-glow group/btn"
+                  className="relative inline-flex items-center justify-center gap-3 px-7 py-3.5 rounded-full bg-champagne hover:bg-champagne-light text-obsidian text-xs tracking-[0.2em] uppercase font-semibold border border-champagne hover:border-champagne-light transition-all duration-300 shadow-glow hover:shadow-[0_0_25px_rgba(214,194,154,0.4)] transform hover:-translate-y-1 active:translate-y-0 group/btn"
                 >
                   <span>SHOP WOMEN</span>
                   <ArrowRight className="w-3.5 h-3.5 transition-transform duration-300 group-hover/btn:translate-x-1" />
@@ -196,7 +196,7 @@ export default function PrivateOffers() {
                 <button
                   onClick={() => navigateToCatalogue({ gender: 'men' })}
                   data-cursor="explore"
-                  className="inline-flex items-center justify-center gap-3 px-7 py-3.5 rounded-full bg-champagne hover:bg-champagne-light text-obsidian text-xs tracking-[0.2em] uppercase font-semibold transition-all duration-300 shadow-glow group/btn"
+                  className="relative inline-flex items-center justify-center gap-3 px-7 py-3.5 rounded-full bg-champagne hover:bg-champagne-light text-obsidian text-xs tracking-[0.2em] uppercase font-semibold border border-champagne hover:border-champagne-light transition-all duration-300 shadow-glow hover:shadow-[0_0_25px_rgba(214,194,154,0.4)] transform hover:-translate-y-1 active:translate-y-0 group/btn"
                 >
                   <span>SHOP MEN</span>
                   <ArrowRight className="w-3.5 h-3.5 transition-transform duration-300 group-hover/btn:translate-x-1" />

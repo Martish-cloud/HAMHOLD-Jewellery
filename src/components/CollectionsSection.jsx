@@ -1,20 +1,46 @@
-import React, { useState } from 'react';
+import React, { useState, useRef, useEffect } from 'react';
 import { COLLECTIONS, PRODUCTS } from '../data/products';
 import { useShop } from '../context/ShopContext';
-import { ArrowRight, Sparkles } from 'lucide-react';
+import { ArrowRight, Sparkles, ChevronLeft, ChevronRight } from 'lucide-react';
 import { GhostInterleapText } from './TextAnimations';
 
 export default function CollectionsSection() {
   const { navigateToCatalogue, setSelectedProduct } = useShop();
   const [activeCollectionId, setActiveCollectionId] = useState('SIGNATURE');
+  const scrollRef = useRef(null);
+  const [canScrollLeft, setCanScrollLeft] = useState(false);
+  const [canScrollRight, setCanScrollRight] = useState(true);
 
   const currentCollection =
     COLLECTIONS.find((c) => c.id === activeCollectionId) || COLLECTIONS[0];
 
-  // Get sample products from this collection
+  // Get all products from this collection for full swiping experience
   const collectionProducts = PRODUCTS.filter(
     (p) => p.collection === activeCollectionId
-  ).slice(0, 3);
+  );
+
+  const checkScroll = () => {
+    if (!scrollRef.current) return;
+    const { scrollLeft, scrollWidth, clientWidth } = scrollRef.current;
+    setCanScrollLeft(scrollLeft > 10);
+    setCanScrollRight(scrollLeft < scrollWidth - clientWidth - 10);
+  };
+
+  useEffect(() => {
+    if (scrollRef.current) {
+      scrollRef.current.scrollLeft = 0;
+    }
+    checkScroll();
+  }, [activeCollectionId]);
+
+  const scroll = (direction) => {
+    if (!scrollRef.current) return;
+    const offset = scrollRef.current.clientWidth * 0.75;
+    scrollRef.current.scrollBy({
+      left: direction === 'left' ? -offset : offset,
+      behavior: 'smooth'
+    });
+  };
 
   return (
     <section className="py-20 md:py-32 bg-espresso/30 border-t border-champagne/10 relative overflow-hidden">
@@ -85,33 +111,64 @@ export default function CollectionsSection() {
             </button>
           </div>
 
-          {/* Right: Featured Pieces from this Collection */}
-          <div className="lg:col-span-7 grid grid-cols-1 sm:grid-cols-3 gap-4 sm:gap-5 mt-6 lg:mt-0">
-            {collectionProducts.map((prod) => (
-              <div
-                key={prod.id}
-                onClick={() => setSelectedProduct(prod)}
-                className="group p-4 rounded-xl bg-obsidian-surface/60 border border-champagne/15 hover:border-champagne/40 transition-all duration-300 cursor-pointer flex flex-col justify-between"
-              >
-                <div className="relative w-full aspect-square flex items-center justify-center p-3 mb-3">
-                  <div className="absolute bottom-2 w-3/4 h-3 bg-black/40 blur-sm rounded-full" />
-                  <img
-                    src={prod.primaryImage}
-                    alt={prod.name}
-                    loading="lazy"
-                    className="w-full h-full object-contain filter drop-shadow-[0_6px_12px_rgba(0,0,0,0.6)] group-hover:scale-105 transition-transform duration-500"
-                  />
-                </div>
-                <div>
-                  <h4 className="font-serif-luxury text-sm text-ivory line-clamp-1 group-hover:text-champagne transition-colors">
-                    {prod.name}
-                  </h4>
-                  <div className="text-xs font-semibold text-champagne mt-1">
-                    ₹{prod.price.toLocaleString('en-IN')}
+          {/* Right: Featured Pieces Horizontal Swipe Track */}
+          <div className="lg:col-span-7 mt-6 lg:mt-0 flex flex-col">
+            <div className="flex items-center justify-between mb-4">
+              <span className="text-[11px] uppercase tracking-widest text-champagne/80 font-sans">
+                Curated Pieces ({collectionProducts.length})
+              </span>
+              <div className="flex items-center gap-2">
+                <button
+                  onClick={() => scroll('left')}
+                  disabled={!canScrollLeft}
+                  aria-label="Previous piece"
+                  className="w-8 h-8 rounded-full border border-champagne/30 flex items-center justify-center text-champagne hover:bg-champagne hover:text-obsidian disabled:opacity-25 disabled:pointer-events-none transition-all duration-300"
+                >
+                  <ChevronLeft className="w-4 h-4" />
+                </button>
+                <button
+                  onClick={() => scroll('right')}
+                  disabled={!canScrollRight}
+                  aria-label="Next piece"
+                  className="w-8 h-8 rounded-full border border-champagne/30 flex items-center justify-center text-champagne hover:bg-champagne hover:text-obsidian disabled:opacity-25 disabled:pointer-events-none transition-all duration-300"
+                >
+                  <ChevronRight className="w-4 h-4" />
+                </button>
+              </div>
+            </div>
+
+            <div
+              ref={scrollRef}
+              onScroll={checkScroll}
+              className="flex overflow-x-auto gap-4 sm:gap-5 pb-3 -mx-2 px-2 no-scrollbar scroll-smooth snap-x snap-mandatory"
+            >
+              {collectionProducts.map((prod) => (
+                <div
+                  key={prod.id}
+                  onClick={() => setSelectedProduct(prod)}
+                  data-cursor="view"
+                  className="flex-shrink-0 w-48 sm:w-56 snap-start group p-4 rounded-xl bg-obsidian-surface/80 border border-champagne/15 hover:border-champagne/45 transition-all duration-300 cursor-pointer flex flex-col justify-between hover:shadow-luxury-hover"
+                >
+                  <div className="relative w-full aspect-square flex items-center justify-center p-3 mb-3 bg-obsidian/50 rounded-lg overflow-hidden border border-champagne/10">
+                    <div className="absolute bottom-2 w-3/4 h-3 bg-black/40 blur-sm rounded-full" />
+                    <img
+                      src={prod.primaryImage}
+                      alt={prod.name}
+                      loading="lazy"
+                      className="w-full h-full object-contain filter drop-shadow-[0_6px_12px_rgba(0,0,0,0.6)] group-hover:scale-105 transition-transform duration-500"
+                    />
+                  </div>
+                  <div>
+                    <h4 className="font-serif-luxury text-sm text-ivory line-clamp-1 group-hover:text-champagne transition-colors">
+                      {prod.name}
+                    </h4>
+                    <div className="text-xs font-semibold text-champagne mt-1">
+                      ₹{prod.price.toLocaleString('en-IN')}
+                    </div>
                   </div>
                 </div>
-              </div>
-            ))}
+              ))}
+            </div>
           </div>
         </div>
       </div>

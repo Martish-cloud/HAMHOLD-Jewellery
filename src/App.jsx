@@ -23,6 +23,7 @@ import ProductDetailModal from './components/ProductDetailModal';
 import CartDrawer from './components/CartDrawer';
 import WishlistDrawer from './components/WishlistDrawer';
 import SearchModal from './components/SearchModal';
+import FloatingJewellerySearch from './components/FloatingJewellerySearch';
 import AboutModal from './components/AboutModal';
 import ContactModal from './components/ContactModal';
 import Footer from './components/Footer';
@@ -40,6 +41,9 @@ export default function App() {
 
       {/* Header & Sticky Announcement */}
       <Navbar />
+
+      {/* Premium Floating Jewellery Search System */}
+      <FloatingJewellerySearch />
 
       {/* Main View Router */}
       <main>

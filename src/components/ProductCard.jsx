@@ -6,7 +6,23 @@ import { formatINR } from '../data/products';
 export default function ProductCard({ product, priority = false }) {
   const { isInWishlist, toggleWishlist, addToCart, setSelectedProduct } = useShop();
   const [isAdded, setIsAdded] = useState(false);
+  const [tilt, setTilt] = useState({ x: 0, y: 0, glareX: 50, glareY: 50, isHovered: false });
   const wishlisted = isInWishlist(product.id);
+
+  const handleMouseMove = (e) => {
+    // Only apply on fine-pointer devices (desktop mouse)
+    if (window.matchMedia('(pointer: coarse)').matches) return;
+    const rect = e.currentTarget.getBoundingClientRect();
+    const x = (e.clientX - rect.left) / rect.width;
+    const y = (e.clientY - rect.top) / rect.height;
+    const rotX = (0.5 - y) * 8; // subtle tilt max 4 deg
+    const rotY = (x - 0.5) * 8;
+    setTilt({ x: rotX, y: rotY, glareX: x * 100, glareY: y * 100, isHovered: true });
+  };
+
+  const handleMouseLeave = () => {
+    setTilt({ x: 0, y: 0, glareX: 50, glareY: 50, isHovered: false });
+  };
 
   const handleQuickAdd = (e) => {
     e.stopPropagation();
@@ -27,9 +43,27 @@ export default function ProductCard({ product, priority = false }) {
   return (
     <div
       onClick={handleCardClick}
+      onMouseMove={handleMouseMove}
+      onMouseLeave={handleMouseLeave}
       data-cursor="view"
-      className="group relative flex flex-col bg-obsidian-card/60 rounded-xl border border-champagne/10 hover:border-champagne/35 transition-all duration-500 overflow-hidden cursor-pointer shadow-luxury hover:shadow-luxury-hover"
+      style={{
+        transform: tilt.isHovered
+          ? `perspective(1000px) rotateX(${tilt.x}deg) rotateY(${tilt.y}deg) translateY(-4px) translateZ(10px)`
+          : 'perspective(1000px) rotateX(0deg) rotateY(0deg) translateY(0px) translateZ(0px)',
+        transformStyle: 'preserve-3d',
+        transition: tilt.isHovered ? 'transform 0.12s ease-out' : 'transform 0.6s cubic-bezier(0.16, 1, 0.3, 1)'
+      }}
+      className="group relative flex flex-col bg-obsidian-card/60 rounded-xl border border-champagne/10 hover:border-champagne/35 transition-colors duration-500 overflow-hidden cursor-pointer shadow-luxury hover:shadow-luxury-hover will-change-transform"
     >
+      {/* AR/VR Specular Reflection Overlay */}
+      {tilt.isHovered && (
+        <div
+          className="pointer-events-none absolute inset-0 z-30 transition-opacity duration-300 rounded-xl opacity-75"
+          style={{
+            background: `radial-gradient(circle at ${tilt.glareX}% ${tilt.glareY}%, rgba(214, 194, 154, 0.18) 0%, rgba(214, 194, 154, 0.04) 40%, transparent 70%)`
+          }}
+        />
+      )}
       {/* Badges */}
       <div className="absolute top-3.5 left-3.5 z-10 flex flex-col gap-1.5 pointer-events-none">
         {product.isNew && (

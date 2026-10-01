@@ -110,10 +110,21 @@ export default function ForHimSection() {
           </button>
         </div>
 
-        {/* 4 Men's Jewellery Cards Grid */}
+        {/* 4 Men's Jewellery Cards Grid with Shimmer Stroke Effects */}
         <div className="grid grid-cols-2 lg:grid-cols-4 gap-4 sm:gap-6">
           {mensProducts.map((product) => (
-            <ProductCard key={product.id} product={product} />
+            <div key={product.id} className="relative group/shimmer rounded-xl p-[1.5px] overflow-hidden h-full">
+              {/* Continuous animated travelling gold light streak along card perimeter */}
+              <div
+                className="absolute -inset-[150%] pointer-events-none opacity-40 group-hover/shimmer:opacity-100 transition-opacity duration-500 animate-[spin_6s_linear_infinite]"
+                style={{
+                  background: 'conic-gradient(from 0deg at 50% 50%, transparent 0deg, transparent 270deg, rgba(214, 194, 154, 0.4) 300deg, rgba(214, 194, 154, 0.95) 335deg, rgba(255, 248, 230, 1) 350deg, transparent 360deg)'
+                }}
+              />
+              <div className="relative rounded-[11px] bg-obsidian h-full w-full">
+                <ProductCard product={product} />
+              </div>
+            </div>
           ))}
         </div>
       </div>

@@ -29,10 +29,11 @@ export default function ForHerSection() {
           </div>
           <button
             onClick={() => navigateToCatalogue({ gender: 'women' })}
-            className="mt-4 md:mt-0 inline-flex items-center gap-2 text-xs uppercase tracking-[0.2em] text-champagne hover:text-champagne-light transition-colors group"
+            data-cursor="explore"
+            className="mt-4 md:mt-0 inline-flex items-center gap-2.5 px-5 py-2.5 rounded-full border border-champagne/30 hover:border-champagne bg-espresso-light/40 hover:bg-champagne hover:text-obsidian text-champagne text-xs uppercase tracking-[0.2em] font-medium transition-all duration-300 transform hover:-translate-y-0.5 shadow-sm hover:shadow-glow group"
           >
             <span>EXPLORE WOMEN'S ATELIER</span>
-            <ArrowRight className="w-4 h-4 transition-transform group-hover:translate-x-1" />
+            <ArrowRight className="w-4 h-4 transition-transform duration-300 group-hover:translate-x-1" />
           </button>
         </div>
 

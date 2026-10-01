@@ -62,8 +62,10 @@ export default function Craftsmanship() {
             return (
               <div
                 key={st.num}
-                className="group p-6 rounded-xl bg-obsidian-card/60 hover:bg-obsidian-light/80 border border-champagne/15 hover:border-champagne/40 transition-all duration-300 flex flex-col justify-between"
+                className="group relative p-6 rounded-xl bg-obsidian-card/60 hover:bg-obsidian-light/90 border border-champagne/15 hover:border-champagne/60 hover:shadow-[0_0_25px_rgba(214,194,154,0.25)] transform hover:-translate-y-1.5 transition-all duration-500 flex flex-col justify-between overflow-hidden"
               >
+                {/* Subtle gold ambient glow on hover */}
+                <div className="absolute inset-0 bg-gradient-to-b from-champagne/10 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500 pointer-events-none rounded-xl" />
                 <div>
                   <div className="flex items-center justify-between mb-6">
                     <span className="font-serif-luxury text-2xl text-champagne font-light">

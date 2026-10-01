@@ -33,3 +33,5 @@ dist-ssr
 src/HamHold/
 scripts/__pycache__/
 *.pyc
+desktop.ini
+22.ico

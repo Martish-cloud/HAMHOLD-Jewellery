@@ -6,6 +6,9 @@ import { BlurWipeText } from './TextAnimations';
 export default function TheHamholdEdit() {
   const { navigateToCatalogue } = useShop();
   const [activeLightboxIndex, setActiveLightboxIndex] = useState(null);
+  const scrollContainerRef = React.useRef(null);
+  const [canScrollLeft, setCanScrollLeft] = useState(false);
+  const [canScrollRight, setCanScrollRight] = useState(true);
 
   const lookbookImages = [
     {
@@ -13,25 +16,50 @@ export default function TheHamholdEdit() {
       title: '01 — THE SIGNATURE EDIT',
       subtitle: 'Sculpted in 18K solid gold, Polki diamonds & royal emeralds',
       tag: 'Grand Atelier',
-      src: '/Image 1.png',
-      srcWebp: '/images/editorial/the-hamhold-edit/image-1.webp',
-      srcMobile: '/images/editorial/the-hamhold-edit/image-1-mobile.webp',
+      src: '/images/editorial/the-hamhold-edit/hamhold-edit-01.webp',
+      srcWebp: '/images/editorial/the-hamhold-edit/hamhold-edit-01.webp',
+      srcMobile: '/images/editorial/the-hamhold-edit/hamhold-edit-01-mobile.webp',
       aspect: 'aspect-[16/11]',
-      focal: 'object-[center_28%]',
-      alt: 'HAMHOLD Emerald Couture Fine Jewellery Editorial'
+      focal: 'object-[center_25%]',
+      alt: 'HAMHOLD The Signature Edit - Haute Joaillerie'
     },
     {
       id: '02',
       title: '02 — TIMELESS ADORNMENT',
       subtitle: 'Heirloom silhouettes designed to transcend generations',
       tag: 'Heritage Collection',
-      src: '/images/editorial/the-hamhold-edit/hamhold-edit-03.webp',
-      srcMobile: '/images/editorial/the-hamhold-edit/hamhold-edit-03-mobile.webp',
+      src: '/images/editorial/the-hamhold-edit/hamhold-edit-02.webp',
+      srcWebp: '/images/editorial/the-hamhold-edit/hamhold-edit-02.webp',
+      srcMobile: '/images/editorial/the-hamhold-edit/hamhold-edit-02-mobile.webp',
       aspect: 'aspect-[16/11]',
-      focal: 'object-[50%_28%]',
-      alt: 'HAMHOLD Heritage Jewellery Editorial'
+      focal: 'object-[center_28%]',
+      alt: 'HAMHOLD Timeless Adornment - Emerald & Gold Haute Joaillerie'
     }
   ];
+
+  const checkScroll = () => {
+    if (!scrollContainerRef.current) return;
+    const { scrollLeft, scrollWidth, clientWidth } = scrollContainerRef.current;
+    setCanScrollLeft(scrollLeft > 20);
+    setCanScrollRight(scrollLeft < scrollWidth - clientWidth - 20);
+  };
+
+  useEffect(() => {
+    checkScroll();
+    window.addEventListener('resize', checkScroll);
+    return () => window.removeEventListener('resize', checkScroll);
+  }, []);
+
+  const handleSwipe = (direction) => {
+    if (!scrollContainerRef.current) return;
+    const container = scrollContainerRef.current;
+    const scrollAmount = container.clientWidth * 0.85;
+    container.scrollBy({
+      left: direction === 'left' ? -scrollAmount : scrollAmount,
+      behavior: 'smooth'
+    });
+    setTimeout(checkScroll, 350);
+  };
 
   // Lightbox keyboard controls
   useEffect(() => {
@@ -59,27 +87,61 @@ export default function TheHamholdEdit() {
 
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
         {/* Section Header */}
-        <div className="text-center max-w-2xl mx-auto mb-16 md:mb-20">
-          <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-espresso-light/60 border border-champagne/25 text-champagne text-[10px] md:text-xs tracking-[0.25em] uppercase font-medium mb-4 backdrop-blur-md">
-            <Sparkles className="w-3.5 h-3.5 text-champagne" />
-            <span>Editorial Lookbook</span>
+        <div className="flex flex-col md:flex-row md:items-end justify-between mb-12 md:mb-16">
+          <div className="max-w-2xl">
+            <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-espresso-light/60 border border-champagne/25 text-champagne text-[10px] md:text-xs tracking-[0.25em] uppercase font-medium mb-4 backdrop-blur-md">
+              <Sparkles className="w-3.5 h-3.5 text-champagne" />
+              <span>Editorial Lookbook</span>
+            </div>
+            <h2 className="font-serif-luxury text-3xl sm:text-5xl md:text-6xl text-ivory tracking-[0.03em] font-normal leading-[1.08] mb-3">
+              <BlurWipeText text="THE HAMHOLD EDIT" />
+            </h2>
+            <p className="text-ivory-soft/85 text-xs sm:text-sm md:text-base font-sans font-light tracking-wide leading-relaxed">
+              A study in light, craftsmanship, and timeless adornment. Swipe to experience the collection.
+            </p>
           </div>
-          <h2 className="font-serif-luxury text-3xl sm:text-5xl md:text-6xl text-ivory tracking-[0.03em] font-normal leading-[1.08] mb-4">
-            <BlurWipeText text="THE HAMHOLD EDIT" />
-          </h2>
-          <p className="text-ivory-soft/85 text-xs sm:text-sm md:text-base font-sans font-light tracking-wide leading-relaxed">
-            A study in light, craftsmanship, and timeless adornment.
-          </p>
+
+          {/* Swipe / Navigation Controls */}
+          <div className="flex items-center gap-3 mt-6 md:mt-0">
+            <button
+              onClick={() => handleSwipe('left')}
+              disabled={!canScrollLeft}
+              aria-label="Previous editorial card"
+              className={`w-11 h-11 rounded-full border border-champagne/30 flex items-center justify-center transition-all duration-300 ${
+                canScrollLeft
+                  ? 'bg-obsidian-surface hover:bg-champagne hover:text-obsidian text-champagne hover:scale-105 active:scale-95 shadow-luxury'
+                  : 'bg-obsidian/30 text-champagne/30 border-champagne/10 cursor-not-allowed opacity-40'
+              }`}
+            >
+              <ChevronLeft className="w-5 h-5" />
+            </button>
+            <button
+              onClick={() => handleSwipe('right')}
+              disabled={!canScrollRight}
+              aria-label="Next editorial card"
+              className={`w-11 h-11 rounded-full border border-champagne/30 flex items-center justify-center transition-all duration-300 ${
+                canScrollRight
+                  ? 'bg-obsidian-surface hover:bg-champagne hover:text-obsidian text-champagne hover:scale-105 active:scale-95 shadow-luxury'
+                  : 'bg-obsidian/30 text-champagne/30 border-champagne/10 cursor-not-allowed opacity-40'
+              }`}
+            >
+              <ChevronRight className="w-5 h-5" />
+            </button>
+          </div>
         </div>
 
-        {/* 2-Column Balanced Editorial Gallery */}
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-6 lg:gap-8 items-stretch">
+        {/* Swipeable Balanced Editorial Gallery Container */}
+        <div
+          ref={scrollContainerRef}
+          onScroll={checkScroll}
+          className="flex md:grid md:grid-cols-2 gap-6 lg:gap-8 items-stretch overflow-x-auto no-scrollbar snap-x snap-mandatory touch-pan-x pb-4 md:pb-0 -mx-4 px-4 md:mx-0 md:px-0"
+        >
           {lookbookImages.map((imgItem, index) => (
-            <div key={imgItem.id} className="flex flex-col">
+            <div key={imgItem.id} className="flex-shrink-0 w-[88vw] sm:w-[480px] md:w-auto snap-center flex flex-col">
               <div
                 onClick={() => setActiveLightboxIndex(index)}
                 data-cursor="view"
-                className="group relative flex-1 min-h-[400px] sm:min-h-[480px] lg:min-h-[580px] rounded-2xl overflow-hidden bg-obsidian-card border border-champagne/20 hover:border-champagne/50 transition-all duration-700 cursor-pointer shadow-luxury hover:shadow-luxury-hover flex flex-col justify-end"
+                className="group relative flex-1 min-h-[420px] sm:min-h-[480px] lg:min-h-[580px] rounded-2xl overflow-hidden bg-obsidian-card border border-champagne/20 hover:border-champagne/50 transition-all duration-700 cursor-pointer shadow-luxury hover:shadow-luxury-hover flex flex-col justify-end"
               >
                 <picture className="absolute inset-0 w-full h-full block">
                   {imgItem.srcMobile && (
