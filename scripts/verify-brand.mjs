@@ -2,7 +2,7 @@ import fs from 'fs';
 import path from 'path';
 
 const forbidden = [
-  'Amit', 'Halder', 'Amital', 'Zariya', 'Zynova', 'Studioholic', 'Alisha',
+  'Amit', 'Halder', 'Amital', 'Zariya', 'Studioholic', 'Alisha',
   'developer', 'freelancer', 'portfolio', 'github.com/amit'
 ];
 

@@ -23,6 +23,7 @@ import ProductDetailModal from './components/ProductDetailModal';
 import CartDrawer from './components/CartDrawer';
 import WishlistDrawer from './components/WishlistDrawer';
 import FloatingJewellerySearch from './components/FloatingJewellerySearch';
+import GlobalWatermark from './components/GlobalWatermark';
 import AboutModal from './components/AboutModal';
 import ContactModal from './components/ContactModal';
 import Footer from './components/Footer';
@@ -43,6 +44,9 @@ export default function App() {
 
       {/* Premium Floating Jewellery Search System */}
       <FloatingJewellerySearch />
+
+      {/* Global Viewport-Fixed Watermark */}
+      <GlobalWatermark />
 
       {/* Main View Router */}
       <main>
